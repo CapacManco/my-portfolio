@@ -1,0 +1,55 @@
+.layout {
+  width: calc(100vw - 13rem);
+  margin-left: 13rem;
+}
+
+.home {
+  padding: 8rem;
+  height: 100vh;
+  background-color: $color--primary;
+  position: relative;
+  border-bottom: 1px solid black;
+
+  display: flex;
+  flex-direction: column;
+  grid-gap: 2.5rem;
+  justify-content: center;
+
+  &__title {
+    color: $color--secondary;
+
+    font-family: "Milgran";
+    line-height: 95%;
+    font-size: 8.2rem;
+    word-spacing: -0.5rem;
+
+    &__span {
+      color: $color--tertiary;
+    }
+  }
+
+  &__description {
+    width: 50rem;
+    color: $color--tertiary;
+    margin-bottom: 1.5rem;
+
+    line-height: 105%;
+    font-family: "Ikaros";
+
+    font-size: 2rem;
+  }
+}
+.work {
+  padding: 8rem;
+  background-color: $color--primary;
+  margin-top: 3px;
+  border-top: 1px solid black;
+
+  &__projet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__title {
+    }
+  }
+}
