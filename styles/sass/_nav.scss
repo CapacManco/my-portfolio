@@ -7,7 +7,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-
+  font-family: 'Ikaros';
+  z-index: 3;
+  color: $color--tertiary--3;
   &__menu {
     list-style: none;
 
@@ -16,7 +18,6 @@
       font-size: 1.6rem;
       text-align: center;
       border-bottom: 1px solid $color--tertiary--2;
-      color: $color--tertiary--3;
       padding: 1.8rem 0;
       cursor: pointer;
     }

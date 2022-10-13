@@ -1,0 +1,232 @@
+.work,
+.work__projet__title,
+.work__projet__description,
+.work__projet__span,
+.nav,
+.home,
+.about,
+.about__description {
+  transition: all 0.4s ease-in-out;
+}
+
+// Work and home sections background color
+.work,
+.home,
+.about {
+  &--codingtutors {
+    background-color: #001644;
+  }
+
+  &--mathieuhue {
+    background-color: rgb(20, 20, 20);
+  }
+
+  &--collectifregina {
+    background-color: #fde4cf;
+  }
+
+  &--photomoi {
+    background-color: black;
+  }
+}
+
+// Home bubbles
+.bg-bubbles {
+  li {
+    transition: background-color 0.4s;
+  }
+  &--codingtutors {
+    li {
+      &:nth-child(2),
+      &:nth-child(5),
+      &:nth-child(8) {
+        background-color: #000f2e;
+      }
+      &:nth-child(3),
+      &:nth-child(6),
+      &:nth-child(9) {
+        background-color: #00184b;
+      }
+
+      &:nth-child(1),
+      &:nth-child(4),
+      &:nth-child(7),
+      &:nth-child(10) {
+        background-color: #001136;
+      }
+    }
+  }
+
+  &--mathieuhue {
+    li {
+      &:nth-child(2),
+      &:nth-child(5),
+      &:nth-child(8) {
+        background-color: #fcb901;
+      }
+      &:nth-child(3),
+      &:nth-child(6),
+      &:nth-child(9) {
+        background-color: rgb(34, 34, 34);
+      }
+
+      &:nth-child(1),
+      &:nth-child(4),
+      &:nth-child(7),
+      &:nth-child(10) {
+        background-color: rgb(0, 0, 0);
+      }
+    }
+  }
+}
+
+// Image overlay color
+.work__projet__image__container--fix,
+.about__image {
+  &--mathieuhue {
+    &:after {
+      background-color: rgb(31, 31, 31);
+    }
+  }
+
+  &--collectifregina {
+    &:after {
+      background-color: rgb(0, 0, 0);
+    }
+  }
+}
+// Image photomoi overlay color
+.about__image {
+  &--photomoi {
+    &:after {
+      background-color: transparent;
+    }
+  }
+}
+
+// Project title
+.work__projet__title {
+  &--collectifregina {
+    color: rgb(255, 255, 255);
+  }
+}
+
+// Project title span color
+.work__projet__title__span {
+  transition: all 0.6s;
+  color: $color--secondary;
+
+  &--codingtutors {
+    color: #f5cc46;
+  }
+
+  &--mathieuhue {
+    color: #f5cc46;
+  }
+
+  &--collectifregina {
+    color: rgb(177, 3, 177);
+  }
+
+  &--rethacolt {
+    color: #ff5100;
+  }
+}
+
+// Project description background and font color
+.work__projet__description,
+.about__description {
+  &--codingtutors {
+    background-color: #000f30;
+    border-top: 1px solid #f5db46;
+  }
+
+  &--mathieuhue {
+    background-color: rgb(252, 185, 1);
+    border-top: 1px solid black;
+    color: black;
+  }
+
+  &--collectifregina {
+    background-color: rgb(141, 49, 141);
+    border-top: none;
+    color: #ffffff;
+    box-shadow: none;
+  }
+
+  &--rethacolt {
+    border-top: 1px solid rgb(250, 188, 56);
+  }
+  &--photomoi {
+    background-color: white;
+    color: black;
+  }
+}
+
+// Project description span color
+.work__projet__span {
+  color: $color--secondary--2;
+
+  &--codingtutors {
+    color: #e4a905;
+  }
+  &--mathieuhue {
+    padding: 0.3rem 0.7rem;
+    color: #e4a905;
+    background-color: black;
+  }
+
+  &--collectifregina {
+    padding: 0.3rem 0.7rem;
+    background-color: #ffffff;
+    color: rgb(126, 0, 126);
+  }
+
+  &--rethacolt {
+    color: rgb(250, 117, 56);
+  }
+}
+
+// Nav section background color
+.nav {
+  &--codingtutors {
+    background-color: #000f30;
+  }
+
+  &--mathieuhue {
+    background-color: rgb(252, 185, 1);
+    color: black;
+  }
+
+  &--collectifregina {
+    background-color: #661c6b;
+    color: #ffffff;
+  }
+
+  &--photomoi {
+    background-color: white;
+    color: black;
+  }
+  // Nav menu items borders
+  &__menu {
+    &--mathieuhue > &__item {
+      border-bottom: 1px solid rgb(71, 71, 71);
+    }
+    &:first-child {
+      border-top: 1px solid $color--tertiary--2;
+    }
+  }
+}
+
+// Bouton "voir plus"
+.button__style--2__medium {
+  &--mathieuhue {
+    color: rgb(252, 185, 1);
+    background-color: rgb(20, 20, 20);
+  }
+  &--collectifregina {
+    background-color: rgb(141, 49, 141);
+    border-color: rgb(141, 49, 141);
+    color: white;
+  }
+}

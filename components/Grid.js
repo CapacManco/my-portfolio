@@ -2,10 +2,10 @@
 // // import Image from "next/image";
 
 // // import codingTutors from "../public/img/codingtutors.jpg";
-// // import mathieuHue from "../public/img/mathieuhue.jpg";
+// import mathieuHue from "../public/img/mathieuhue.jpg";
 // // import rethaColt from "../public/img/rethacolt.jpg";
 // // import wordle from "../public/img/wordle.jpg";
-// // import gabrielGarcia from "../public/img/gabrielgarcia.jpg";
+// // import gabrielGarcia from "../public/img/gabrielgarcia.jpg";0
 // // import planner from "../public/img/planner.jpg";
 // // import collectifRegina from "../public/img/collectifregina.jpg";
 
