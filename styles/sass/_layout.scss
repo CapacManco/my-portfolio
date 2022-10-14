@@ -281,6 +281,7 @@
   &__title {
     z-index: 2;
     margin-left: -2rem;
+    margin-bottom: 1rem;
 
     color: $color--tertiary--4;
 
@@ -289,6 +290,19 @@
     font-size: 3.6rem;
     font-weight: 300;
     letter-spacing: -0.15rem;
+
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+      bottom: -8px;
+      left: 80%;
+      width: 25%;
+      height: 60%;
+      border-bottom: 1px solid $color--quaternary;
+      border-right: 1px solid $color--quaternary;
+    }
 
     &__span {
       color: $color--secondary;

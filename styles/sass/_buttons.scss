@@ -44,4 +44,15 @@
       border: 1px solid;
     }
   }
+
+  // on hover
+
+  &__style--1__medium,
+  &__style--1__small,
+  &__style--2__medium {
+    transition: all 0.2s;
+    &:hover {
+      background-color: $color--primary--5;
+    }
+  }
 }

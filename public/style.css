@@ -100,6 +100,11 @@ body {
   color: #23f5f5;
   border: 1px solid; }
 
+.button__style--1__medium, .button__style--1__small, .button__style--2__medium {
+  transition: all 0.2s; }
+  .button__style--1__medium:hover, .button__style--1__small:hover, .button__style--2__medium:hover {
+    background-color: #033157; }
+
 .arrow-container {
   cursor: pointer;
   width: 100px;
@@ -210,10 +215,10 @@ body {
       background-color: #021d31;
       width: 80px;
       height: 80px;
-      animation-delay: 2s;
+      animation-delay: -2s;
       animation-duration: 17s; }
     .bg-bubbles li:nth-child(3) {
-      animation-delay: 4s;
+      animation-delay: -4s;
       background-color: #03345c; }
     .bg-bubbles li:nth-child(4) {
       width: 60px;
@@ -226,23 +231,23 @@ body {
     .bg-bubbles li:nth-child(6) {
       width: 120px;
       height: 120px;
-      animation-delay: 3s;
+      animation-delay: -3s;
       background-color: #03345c; }
     .bg-bubbles li:nth-child(7) {
       width: 160px;
       height: 160px;
-      animation-delay: 7s;
+      animation-delay: -7s;
       background-color: #011f38; }
     .bg-bubbles li:nth-child(8) {
       width: 20px;
       height: 20px;
-      animation-delay: 15s;
+      animation-delay: -15s;
       animation-duration: 40s;
       background-color: #021d31; }
     .bg-bubbles li:nth-child(9) {
       width: 10px;
       height: 10px;
-      animation-delay: 2s;
+      animation-delay: -2s;
       animation-duration: 40s;
       background-color: fade(white, 30%);
       background-color: #03345c; }
@@ -250,12 +255,12 @@ body {
       left: 90%;
       width: 160px;
       height: 160px;
-      animation-delay: 11s;
+      animation-delay: -11s;
       background-color: #011f38; }
 
 @-webkit-keyframes square {
   0% {
-    transform: translateY(0); }
+    transform: translateY(-200px); }
   100% {
     transform: translateY(-700px) rotate(600deg); } }
 
@@ -533,12 +538,23 @@ body {
   .contact__title {
     z-index: 2;
     margin-left: -2rem;
+    margin-bottom: 1rem;
     color: rgba(236, 236, 236, 0.795);
     font-family: 'Milgran';
     line-height: 95%;
     font-size: 3.6rem;
     font-weight: 300;
-    letter-spacing: -0.15rem; }
+    letter-spacing: -0.15rem;
+    position: relative; }
+    .contact__title::after {
+      position: absolute;
+      content: '';
+      bottom: -8px;
+      left: 80%;
+      width: 25%;
+      height: 60%;
+      border-bottom: 1px solid #23f5f5;
+      border-right: 1px solid #23f5f5; }
     .contact__title__span {
       color: #e23e39; }
 
