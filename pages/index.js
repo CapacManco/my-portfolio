@@ -24,6 +24,14 @@ export default function Home() {
   const [activeSection, setActiveSection] = useState(null);
 
   useEffect(() => {
+    const checkClassNameHovered = () => {
+      for (let [key, value] of Object.entries(projectsHovered)) {
+        if (value) {
+          return key;
+        }
+      }
+    };
+
     setActiveThemeName(checkClassNameHovered());
   }, [projectsHovered]);
 
@@ -66,14 +74,6 @@ export default function Home() {
       window.removeEventListener('scroll', () => console.log('yo'));
     };
   }, []);
-
-  const checkClassNameHovered = () => {
-    for (let [key, value] of Object.entries(projectsHovered)) {
-      if (value) {
-        return key;
-      }
-    }
-  };
 
   const setImageHovered = (boolean) => {
     setProjectsHovered({ ...projectsHovered, ['photomoi']: boolean });
