@@ -20,9 +20,10 @@ const Projet = ({
   const infosPosition = numberOfProject % 2 === 0 ? 'left' : 'right';
 
   const renderTechnologies = () => {
-    return technologies.map((technologie) => {
+    return technologies.map((technologie, i) => {
       return (
         <Technologie
+          key={i}
           technologie={technologie}
           projectClass={projectClass}
           activeThemeName={activeThemeName}
@@ -32,10 +33,11 @@ const Projet = ({
   };
 
   const renderDescription = () => {
-    return description.map((descriptionPart) => {
+    return description.map((descriptionPart, i) => {
       if (descriptionPart.span)
         return (
           <span
+            key={i}
             className={`work__projet__span  ${
               activeThemeName ? `work__projet__span--${activeThemeName}` : ''
             }`}

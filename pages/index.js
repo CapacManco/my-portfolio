@@ -51,8 +51,6 @@ export default function Home() {
         contact: observable.contact.getBoundingClientRect(),
       };
 
-      console.log(window.innerHeight, pos.about.top);
-
       if (pos.home.top < window.innerHeight && pos.home.bottom >= 400) {
         setActiveSection('home');
       } else if (
@@ -71,15 +69,13 @@ export default function Home() {
     });
 
     return () => {
-      window.removeEventListener('scroll', () => console.log('yo'));
+      window.removeEventListener('scroll', () => console.log(''));
     };
   }, []);
 
   const setImageHovered = (boolean) => {
     setProjectsHovered({ ...projectsHovered, ['photomoi']: boolean });
   };
-
-  console.log(activeThemeName);
 
   return (
     <div>

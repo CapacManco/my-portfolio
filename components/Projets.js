@@ -142,6 +142,7 @@ const Projets = ({ projectsHovered, setProjectsHovered, activeThemeName }) => {
     return projects.slice(0, numProjectsShown).map((projet, i) => {
       return (
         <Projet
+          key={i}
           titre={projet.titre}
           description={projet.description}
           number={i}
