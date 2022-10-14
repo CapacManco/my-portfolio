@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Projet from '../components/Projet';
 
 import mathieuHue from '../public/img/mathieuhue.png';
-import codingTutors from '../public/img/codingTutors.png';
+import codingTutors from '../public/img/codingtutors.png';
 import collectifRegina from '../public/img/collectifregina4.png';
 import rethaColt from '../public/img/rethacolt.png';
 import ggarcia from '../public/img/ggarcia.png';
