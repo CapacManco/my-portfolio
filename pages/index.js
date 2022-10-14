@@ -156,18 +156,19 @@ export default function Home() {
                     : ''
                 }`}
               >
-                En tant que développeur frontend junior, j'ai eu l'occasion
-                d'expérimenter plusieurs technologies frontend et backend sur
-                les différents projets sur lesquels j'ai pu travailler. <br />
+                En tant que développeur frontend junior, j&apos;ai eu
+                l&apos;occasion d&apos;expérimenter plusieurs technologies
+                frontend et backend sur les différents projets sur lesquels
+                j&apos;ai pu travailler. <br />
                 <br />
-                L'approche pragmatique et artistique nécessaires à la conception
-                de sites web sont ce qui me plaît le plus. Ce mélange
-                intéressant de qualités que demandent le design et création d'un
-                site web fait directement écho au travail de l'artisan,
-                minutieusement travaillé et inventif.
+                L&apos;approche pragmatique et artistique nécessaires à la
+                conception de sites web sont ce qui me plaît le plus. Ce mélange
+                intéressant de qualités que demandent le design et création
+                d&apos;un site web fait directement écho au travail de
+                l&apos;artisan, minutieusement travaillé et inventif.
                 <br /> <br />
-                J'approche chacun des projets qui me sont confiés avec rigueur
-                et communication.
+                J&apos;approche chacun des projets qui me sont confiés avec
+                rigueur et communication.
               </div>
             </div>
             <div
@@ -220,8 +221,8 @@ export default function Home() {
             Me contacter
           </div>
           <div className="contact__description">
-            Si vous souhaitez me parler à propos d'un projet ou si vous avez une
-            question, n'hésitez pas à me contacter :-{')'}
+            Si vous souhaitez me parler à propos d&apos;un projet ou si vous
+            avez une question, n&apos;hésitez pas à me contacter :-{')'}
           </div>
           <a href="mailto:garcia.gvj@gmail.com">
             <button className="button__style--1__small">Contactez-moi !</button>
