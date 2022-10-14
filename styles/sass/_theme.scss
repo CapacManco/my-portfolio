@@ -3,16 +3,19 @@
 .work__projet__description,
 .work__projet__span,
 .nav,
+.nav__menu__item,
 .home,
 .about,
-.about__description {
+.about__description,
+.contact {
   transition: all 0.4s ease-in-out;
 }
 
 // Work and home sections background color
 .work,
 .home,
-.about {
+.about,
+.contact {
   &--codingtutors {
     background-color: #001644;
   }
@@ -26,7 +29,7 @@
   }
 
   &--photomoi {
-    background-color: black;
+    background-color: rgb(29, 29, 29);
   }
 }
 
@@ -80,6 +83,7 @@
   }
 }
 
+///// PROJET IMAGES
 // Image overlay color
 .work__projet__image__container--fix,
 .about__image {
@@ -94,6 +98,12 @@
       background-color: rgb(0, 0, 0);
     }
   }
+
+  &--photomoi {
+    &:after {
+      background-color: rgb(0, 0, 0);
+    }
+  }
 }
 // Image photomoi overlay color
 .about__image {
@@ -104,6 +114,7 @@
   }
 }
 
+///// PROJET INFOS
 // Project title
 .work__projet__title {
   &--collectifregina {
@@ -112,7 +123,8 @@
 }
 
 // Project title span color
-.work__projet__title__span {
+.work__projet__title__span,
+.about__title__span {
   transition: all 0.6s;
   color: $color--secondary;
 
@@ -131,6 +143,10 @@
   &--rethacolt {
     color: #ff5100;
   }
+
+  &--photomoi {
+    color: grey;
+  }
 }
 
 // Project description background and font color
@@ -143,8 +159,8 @@
 
   &--mathieuhue {
     background-color: rgb(252, 185, 1);
-    border-top: 1px solid black;
-    color: black;
+    border-top: 1px solid #000000;
+    color: #000000;
   }
 
   &--collectifregina {
@@ -158,8 +174,8 @@
     border-top: 1px solid rgb(250, 188, 56);
   }
   &--photomoi {
-    background-color: white;
-    color: black;
+    color: white;
+    background-color: #000000;
   }
 }
 
@@ -173,7 +189,7 @@
   &--mathieuhue {
     padding: 0.3rem 0.7rem;
     color: #e4a905;
-    background-color: black;
+    background-color: #000000;
   }
 
   &--collectifregina {
@@ -185,6 +201,38 @@
   &--rethacolt {
     color: rgb(250, 117, 56);
   }
+
+  &--photomoi {
+    color: grey;
+  }
+}
+
+///// NAVIGATION
+// Active nav menu item
+.active {
+  &--codingtutors {
+    // color: #000f30;
+    // background-color: #e4a905;
+    // background-color: #c50101;
+    // color: #ffffff;
+    // background-color: #29139a;
+    color: #001644;
+    background-color: #ffffff;
+  }
+  &--mathieuhue {
+    background-color: #000000;
+    color: rgb(252, 185, 1);
+  }
+
+  &--collectifregina {
+    color: purple;
+    background-color: #ffffff;
+  }
+
+  &--photomoi {
+    color: #000000;
+    background-color: #ffffff;
+  }
 }
 
 // Nav section background color
@@ -195,7 +243,7 @@
 
   &--mathieuhue {
     background-color: rgb(252, 185, 1);
-    color: black;
+    color: #000000;
   }
 
   &--collectifregina {
@@ -204,8 +252,8 @@
   }
 
   &--photomoi {
-    background-color: white;
-    color: black;
+    color: white;
+    background-color: #000000;
   }
   // Nav menu items borders
   &__menu {
@@ -217,6 +265,8 @@
     }
   }
 }
+
+///// BOUTONS
 
 // Bouton "voir plus"
 .button__style--2__medium {

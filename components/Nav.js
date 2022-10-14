@@ -1,24 +1,71 @@
 import React from 'react';
+import Image from 'next/image';
+
+// import { AiFillMail, AiFillLinkedin } from 'react-icons';
+
+import logo from '../public/img/logo.png';
 
 // Home
 // About
 // Work
 // Contact
-export default function Nav({ activeThemeName }) {
+export default function Nav({ activeThemeName, activeSection }) {
   return (
     <nav className={`nav ${activeThemeName ? `nav--${activeThemeName}` : ''}`}>
-      <div className="nav__links"></div>
+      <div className="nav__logo">
+        {/* <Image src={logo} height="600" width="600" /> */}
+      </div>
       <ul
         className={`nav__menu ${
           activeThemeName ? `nav__menu--${activeThemeName}` : ''
         }`}
       >
-        <li className="nav__menu__item">Accueil</li>
-        <li className="nav__menu__item">Projets</li>
-        <li className="nav__menu__item">À propos</li>
-        <li className="nav__menu__item">Contact</li>
+        <a href="#home" className="nav__menu__link">
+          <li
+            className={`nav__menu__item ${
+              activeSection === 'home'
+                ? `active active--${activeThemeName}`
+                : ''
+            }`}
+          >
+            Accueil
+          </li>
+        </a>
+        <a href="#work" className="nav__menu__link">
+          <li
+            className={`nav__menu__item ${
+              activeSection === 'work'
+                ? `active active--${activeThemeName}`
+                : ''
+            }`}
+          >
+            Projets
+          </li>
+        </a>
+        <a href="#about" className="nav__menu__link">
+          <li
+            className={`nav__menu__item ${
+              activeSection === 'about'
+                ? `active active--${activeThemeName}`
+                : ''
+            }`}
+          >
+            À propos
+          </li>
+        </a>
+        <a href="#contact" className="nav__menu__link">
+          <li
+            className={`nav__menu__item ${
+              activeSection === 'contact'
+                ? `active active--${activeThemeName}`
+                : ''
+            }`}
+          >
+            Contact
+          </li>
+        </a>
       </ul>
-      <div className="nav__logo"></div>
+      <div className="nav__links"></div>
     </nav>
   );
 }

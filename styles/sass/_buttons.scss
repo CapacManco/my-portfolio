@@ -3,9 +3,24 @@
     &__medium {
       border: none;
       align-self: start;
-      padding: 1.2rem 5rem;
+      padding: 1.2rem 4.5rem;
       font-size: 1.5rem;
-      letter-spacing: 0.3rem;
+      letter-spacing: 0.2rem;
+      background-color: inherit;
+      color: $color--quaternary;
+      font-family: 'Ikaros';
+      border: 1px solid;
+      border-radius: 4px;
+
+      cursor: pointer;
+    }
+
+    &__small {
+      border: none;
+      align-self: start;
+      padding: 1.2rem 3rem;
+      font-size: 1.3rem;
+      letter-spacing: 0.2rem;
       background-color: inherit;
       color: $color--quaternary;
       font-family: 'Ikaros';

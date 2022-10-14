@@ -170,7 +170,7 @@ const Projets = ({ projectsHovered, setProjectsHovered, activeThemeName }) => {
   };
 
   return (
-    <div
+    <section
       className={`work ${activeThemeName ? `work--${activeThemeName}` : ''}`}
       id="work"
     >
@@ -187,7 +187,7 @@ const Projets = ({ projectsHovered, setProjectsHovered, activeThemeName }) => {
           Voir plus
         </button>
       )}
-    </div>
+    </section>
   );
 };
 

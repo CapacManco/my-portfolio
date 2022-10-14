@@ -21,10 +21,51 @@ export default function Home() {
   });
 
   const [activeThemeName, setActiveThemeName] = useState(null);
+  const [activeSection, setActiveSection] = useState(null);
 
   useEffect(() => {
     setActiveThemeName(checkClassNameHovered());
   }, [projectsHovered]);
+
+  useEffect(() => {
+    window.addEventListener('scroll', function () {
+      const observable = {
+        home: document.querySelector('.home'),
+        about: document.querySelector('.about'),
+        work: document.querySelector('.work'),
+        contact: document.querySelector('.contact'),
+      };
+
+      const pos = {
+        home: observable.home.getBoundingClientRect(),
+        about: observable.about.getBoundingClientRect(),
+        work: observable.work.getBoundingClientRect(),
+        contact: observable.contact.getBoundingClientRect(),
+      };
+
+      console.log(window.innerHeight, pos.about.top);
+
+      if (pos.home.top < window.innerHeight && pos.home.bottom >= 400) {
+        setActiveSection('home');
+      } else if (
+        pos.about.bottom < window.innerHeight &&
+        pos.about.bottom >= 400
+      ) {
+        setActiveSection('about');
+      } else if (pos.work.top < window.innerHeight && pos.work.bottom >= 400) {
+        setActiveSection('work');
+      } else if (
+        pos.contact.top < window.innerHeight &&
+        pos.contact.bottom >= 400
+      ) {
+        setActiveSection('contact');
+      }
+    });
+
+    return () => {
+      window.removeEventListener('scroll', () => console.log('yo'));
+    };
+  }, []);
 
   const checkClassNameHovered = () => {
     for (let [key, value] of Object.entries(projectsHovered)) {
@@ -48,12 +89,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Nav activeThemeName={activeThemeName} />
+      <Nav activeThemeName={activeThemeName} activeSection={activeSection} />
       <main className="layout">
         <div
           className={`home ${
             activeThemeName ? `home--${activeThemeName}` : ''
           }`}
+          id="home"
         >
           <Bubbles activeThemeName={activeThemeName} />
           <p className="home__title">
@@ -87,7 +129,7 @@ export default function Home() {
           activeThemeName={activeThemeName}
         />
 
-        <div
+        <section
           className={`about ${
             activeThemeName ? `about--${activeThemeName}` : ''
           }`}
@@ -96,7 +138,16 @@ export default function Home() {
           <div className="about__container">
             <div className="about__infos">
               <p className="about__title">
-                <span className="about__title--span">{'> '}</span>Qui suis-je ?
+                <span
+                  className={`about__title__span ${
+                    activeThemeName
+                      ? `about__title__span--${activeThemeName}`
+                      : ''
+                  }`}
+                >
+                  {'> '}
+                </span>
+                Qui suis-je ?
               </p>
               <div
                 className={`about__description ${
@@ -145,8 +196,37 @@ export default function Home() {
               {/* </div> */}
             </div>
           </div>
-        </div>
-        <div className="contact" id="contact"></div>
+        </section>
+        <section
+          className={`contact ${
+            activeThemeName ? `contact--${activeThemeName}` : ''
+          }`}
+          id="contact"
+        >
+          <div
+            className={`contact__title ${
+              activeThemeName ? `contact__title--${activeThemeName}` : ''
+            }`}
+          >
+            <span
+              className={`contact__title__span ${
+                activeThemeName
+                  ? `contact__title__span--${activeThemeName}`
+                  : ''
+              }`}
+            >
+              {'> '}
+            </span>
+            Me contacter
+          </div>
+          <div className="contact__description">
+            Si vous souhaitez me parler à propos d'un projet ou si vous avez une
+            question, n'hésitez pas à me contacter :-{')'}
+          </div>
+          <a href="mailto:garcia.gvj@gmail.com">
+            <button className="button__style--1__small">Contactez-moi !</button>
+          </a>
+        </section>
       </main>
 
       <footer className="footer"></footer>
