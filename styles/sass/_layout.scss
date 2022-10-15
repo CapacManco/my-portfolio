@@ -105,7 +105,7 @@
     &__description {
       padding: 3rem;
       background-color: $color--primary--2;
-      color: $color--tertiary--4;
+      color: rgb(198, 204, 224);
       // border-right: 1px solid $color--quaternary;
       border-top: 1px solid $color--quaternary;
 
@@ -246,7 +246,7 @@
   &__description {
     padding: 3rem;
     background-color: $color--primary--2;
-    color: rgb(160, 168, 194);
+    color: rgb(198, 204, 224);
 
     font-family: 'Ikaros';
     z-index: 2;

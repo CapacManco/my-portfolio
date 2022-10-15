@@ -21,7 +21,7 @@ export default function Home() {
   });
 
   const [activeThemeName, setActiveThemeName] = useState(null);
-  const [activeSection, setActiveSection] = useState(null);
+  const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
     const checkClassNameHovered = () => {
@@ -31,7 +31,6 @@ export default function Home() {
         }
       }
     };
-
     setActiveThemeName(checkClassNameHovered());
   }, [projectsHovered]);
 
@@ -153,18 +152,54 @@ export default function Home() {
                 }`}
               >
                 En tant que développeur frontend junior, j&apos;ai eu
-                l&apos;occasion d&apos;expérimenter plusieurs technologies
-                frontend et backend sur les différents projets sur lesquels
-                j&apos;ai pu travailler. <br />
+                l&apos;occasion d&apos;expérimenter plusieurs technologies{' '}
+                <span
+                  className={`about__description__span ${
+                    activeThemeName
+                      ? `about__description__span--${activeThemeName}`
+                      : ''
+                  }`}
+                >
+                  frontend et backend
+                </span>{' '}
+                sur les différents projets sur lesquels j&apos;ai pu travailler.{' '}
                 <br />
-                L&apos;approche pragmatique et artistique nécessaires à la
-                conception de sites web sont ce qui me plaît le plus. Ce mélange
-                intéressant de qualités que demandent le design et création
+                <br />
+                L&apos;approche{' '}
+                <span
+                  className={`about__description__span ${
+                    activeThemeName
+                      ? `about__description__span--${activeThemeName}`
+                      : ''
+                  }`}
+                >
+                  pragmatique et artistique
+                </span>{' '}
+                nécessaires à la conception de sites web sont ce qui me plaît le
+                plus. Ce mélange intéressant de qualités que demandent{' '}
+                <span
+                  className={`about__description__span ${
+                    activeThemeName
+                      ? `about__description__span--${activeThemeName}`
+                      : ''
+                  }`}
+                >
+                  le design et création
+                </span>{' '}
                 d&apos;un site web fait directement écho au travail de
                 l&apos;artisan, minutieusement travaillé et inventif.
                 <br /> <br />
-                J&apos;approche chacun des projets qui me sont confiés avec
-                rigueur et communication.
+                J&apos;approche chacun des projets qui me sont confiés avec{' '}
+                <span
+                  className={`about__description__span ${
+                    activeThemeName
+                      ? `about__description__span--${activeThemeName}`
+                      : ''
+                  }`}
+                >
+                  rigueur et communication
+                </span>
+                .
               </div>
             </div>
             <div
@@ -216,9 +251,13 @@ export default function Home() {
             </span>
             Me contacter
           </div>
-          <div className="contact__description">
+          <div
+            className={`contact__description ${
+              activeThemeName ? `contact__description--${activeThemeName}` : ''
+            }`}
+          >
             Si vous souhaitez me parler à propos d&apos;un projet ou si vous
-            avez une question, n&apos;hésitez pas à me contacter :-{')'}
+            avez une question, n&apos;hésitez pas à m'écrire :-{')'}
           </div>
           <a href="mailto:garcia.gvj@gmail.com">
             <button className="button__style--1__small">Contactez-moi !</button>

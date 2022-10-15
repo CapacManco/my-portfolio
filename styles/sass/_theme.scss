@@ -7,6 +7,7 @@
 .home,
 .about,
 .about__description,
+.about__description__span,
 .contact {
   transition: all 0.4s ease-in-out;
 }
@@ -174,13 +175,22 @@
     border-top: 1px solid rgb(250, 188, 56);
   }
   &--photomoi {
-    color: white;
+    color: rgb(161, 161, 161);
     background-color: #000000;
+    box-shadow: none;
+  }
+}
+
+// Contact description
+.contact__description {
+  &--photomoi {
+    color: rgb(161, 161, 161);
   }
 }
 
 // Project description span color
-.work__projet__span {
+.work__projet__span,
+.about__description__span {
   color: $color--secondary--2;
 
   &--codingtutors {
@@ -203,7 +213,7 @@
   }
 
   &--photomoi {
-    color: grey;
+    color: #ffffff;
   }
 }
 

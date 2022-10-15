@@ -1,7 +1,10 @@
 import React from 'react';
 import Image from 'next/image';
 
-// import { AiFillMail, AiFillLinkedin } from 'react-icons';
+import {
+  AiFillMail as MailIcon,
+  AiFillLinkedin as LinkedinIcon,
+} from 'react-icons/ai';
 
 import logo from '../public/img/logo.png';
 
@@ -65,7 +68,14 @@ export default function Nav({ activeThemeName, activeSection }) {
           </li>
         </a>
       </ul>
-      <div className="nav__links"></div>
+      <div className="nav__links">
+        <a href="mailto:garcia.gvj@gmail.com">
+          <MailIcon className="nav__link" />
+        </a>
+        <a href="https://www.linkedin.com/in/gabriel-garcia-3081b9246/">
+          <LinkedinIcon className="nav__link" />
+        </a>
+      </div>
     </nav>
   );
 }

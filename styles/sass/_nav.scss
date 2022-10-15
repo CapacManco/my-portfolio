@@ -35,6 +35,22 @@
 
   &__links {
     display: flex;
+    justify-content: center;
+    height: 20rem;
+    grid-gap: 1rem;
+
+    a {
+      color: inherit;
+    }
+  }
+
+  &__logo {
+    height: 20rem;
+  }
+
+  &__link {
+    height: 2rem;
+    width: 2rem;
   }
 }
 
