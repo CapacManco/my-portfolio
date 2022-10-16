@@ -71,7 +71,7 @@ body {
   letter-spacing: 0.2rem;
   background-color: inherit;
   color: #23f5f5;
-  font-family: 'Ikaros';
+  font-family: "Ikaros";
   border: 1px solid;
   border-radius: 4px;
   cursor: pointer; }
@@ -80,18 +80,18 @@ body {
   border: none;
   align-self: start;
   padding: 1.2rem 3rem;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   letter-spacing: 0.2rem;
   background-color: inherit;
   color: #23f5f5;
-  font-family: 'Ikaros';
+  font-family: "Ikaros";
   border: 1px solid;
   border-radius: 4px;
   cursor: pointer; }
 
 .button__style--2__medium {
   margin-top: -5rem;
-  font-family: 'Ikaros';
+  font-family: "Ikaros";
   cursor: pointer;
   border: none;
   padding: 1.2rem 3rem;
@@ -378,7 +378,7 @@ body {
     z-index: 2; }
   .home__title {
     color: #e23e39;
-    font-family: 'Milgran';
+    font-family: "Milgran";
     line-height: 95%;
     font-size: 8.2rem;
     word-spacing: -0.5rem;
@@ -390,19 +390,18 @@ body {
     color: #ffffff;
     margin-bottom: 1.5rem;
     line-height: 105%;
-    font-family: 'Ikaros';
+    font-family: "Ikaros";
     font-size: 2rem;
     z-index: 2; }
 
 .work {
-  padding: 8rem;
+  padding: 12rem 0rem;
   background-color: #002849;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  grid-gap: 10rem;
-  margin-bottom: -5rem; }
+  grid-gap: 10rem; }
   .work__projet {
     display: grid;
     grid-template-columns: repeat(12, minmax(2rem, 10rem));
@@ -410,7 +409,7 @@ body {
     .work__projet__title {
       z-index: 2;
       color: rgba(236, 236, 236, 0.795);
-      font-family: 'Ikaros';
+      font-family: "Ikaros";
       line-height: 95%;
       font-size: 2.7rem;
       font-weight: 300; }
@@ -432,7 +431,7 @@ body {
       background-color: #011f38;
       color: #c6cce0;
       border-top: 1px solid #23f5f5;
-      font-family: 'Ikaros';
+      font-family: "Ikaros";
       z-index: 2;
       box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; }
     .work__projet__image__container {
@@ -451,7 +450,7 @@ body {
       .work__projet__image__container--fix {
         position: relative; }
         .work__projet__image__container--fix::after {
-          content: '';
+          content: "";
           position: absolute;
           top: 0;
           left: 0;
@@ -500,7 +499,7 @@ body {
   .about__title {
     z-index: 2;
     color: rgba(236, 236, 236, 0.795);
-    font-family: 'Ikaros';
+    font-family: "Ikaros";
     line-height: 95%;
     font-size: 3.5rem;
     font-weight: 300; }
@@ -513,7 +512,7 @@ body {
     position: relative;
     cursor: pointer; }
     .about__image::after {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
@@ -527,39 +526,41 @@ body {
     padding: 3rem;
     background-color: #011f38;
     color: #c6cce0;
-    font-family: 'Ikaros';
+    font-family: "Ikaros";
     z-index: 2;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     border-radius: 5px; }
 
 .contact {
-  padding: 20rem 8rem;
+  padding: 12rem 0 25rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   grid-gap: 1.8rem; }
   .contact__description {
+    font-size: 1.8rem;
     text-align: center;
     width: 55rem;
     color: #a0a8c2;
-    font-family: 'Ikaros';
+    font-family: "Ikaros";
     z-index: 2;
-    border-radius: 5px; }
+    border-radius: 5px;
+    margin-bottom: 3rem; }
   .contact__title {
     z-index: 2;
     margin-left: -2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.3rem;
     color: rgba(236, 236, 236, 0.795);
-    font-family: 'Milgran';
+    font-family: "Milgran";
     line-height: 95%;
-    font-size: 3.6rem;
+    font-size: 4.3rem;
     font-weight: 300;
     letter-spacing: -0.15rem;
     position: relative; }
     .contact__title::after {
       position: absolute;
-      content: '';
+      content: "";
       bottom: -8px;
       left: 80%;
       width: 25%;

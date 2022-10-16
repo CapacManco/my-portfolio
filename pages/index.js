@@ -1,13 +1,13 @@
-import Head from 'next/head';
-import Image from 'next/image';
+import Head from "next/head";
+import Image from "next/image";
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
-import Nav from '../components/Nav';
-import Projets from '../components/Projets';
+import Nav from "../components/Nav";
+import Projets from "../components/Projets";
 
-import Bubbles from '../components/Bubbles';
-import photoMoi from '../public/img/me.jpg';
+import Bubbles from "../components/Bubbles";
+import photoMoi from "../public/img/me.jpg";
 
 export default function Home() {
   const [projectsHovered, setProjectsHovered] = useState({
@@ -21,7 +21,7 @@ export default function Home() {
   });
 
   const [activeThemeName, setActiveThemeName] = useState(null);
-  const [activeSection, setActiveSection] = useState('home');
+  const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
     const checkClassNameHovered = () => {
@@ -35,12 +35,12 @@ export default function Home() {
   }, [projectsHovered]);
 
   useEffect(() => {
-    window.addEventListener('scroll', function () {
+    window.addEventListener("scroll", function () {
       const observable = {
-        home: document.querySelector('.home'),
-        about: document.querySelector('.about'),
-        work: document.querySelector('.work'),
-        contact: document.querySelector('.contact'),
+        home: document.querySelector(".home"),
+        about: document.querySelector(".about"),
+        work: document.querySelector(".work"),
+        contact: document.querySelector(".contact"),
       };
 
       const pos = {
@@ -50,30 +50,32 @@ export default function Home() {
         contact: observable.contact.getBoundingClientRect(),
       };
 
+      console.log(pos.contact.bottom);
+
       if (pos.home.top < window.innerHeight && pos.home.bottom >= 400) {
-        setActiveSection('home');
+        setActiveSection("home");
       } else if (
         pos.about.bottom < window.innerHeight &&
         pos.about.bottom >= 400
       ) {
-        setActiveSection('about');
+        setActiveSection("about");
       } else if (pos.work.top < window.innerHeight && pos.work.bottom >= 400) {
-        setActiveSection('work');
+        setActiveSection("work");
       } else if (
         pos.contact.top < window.innerHeight &&
         pos.contact.bottom >= 400
       ) {
-        setActiveSection('contact');
+        setActiveSection("contact");
       }
     });
 
     return () => {
-      window.removeEventListener('scroll', () => console.log(''));
+      window.removeEventListener("scroll", () => console.log(""));
     };
   }, []);
 
   const setImageHovered = (boolean) => {
-    setProjectsHovered({ ...projectsHovered, ['photomoi']: boolean });
+    setProjectsHovered({ ...projectsHovered, ["photomoi"]: boolean });
   };
 
   return (
@@ -88,7 +90,7 @@ export default function Home() {
       <main className="layout">
         <div
           className={`home ${
-            activeThemeName ? `home--${activeThemeName}` : ''
+            activeThemeName ? `home--${activeThemeName}` : ""
           }`}
           id="home"
         >
@@ -126,7 +128,7 @@ export default function Home() {
 
         <section
           className={`about ${
-            activeThemeName ? `about--${activeThemeName}` : ''
+            activeThemeName ? `about--${activeThemeName}` : ""
           }`}
           id="about"
         >
@@ -137,10 +139,10 @@ export default function Home() {
                   className={`about__title__span ${
                     activeThemeName
                       ? `about__title__span--${activeThemeName}`
-                      : ''
+                      : ""
                   }`}
                 >
-                  {'> '}
+                  {"> "}
                 </span>
                 Qui suis-je ?
               </p>
@@ -148,53 +150,53 @@ export default function Home() {
                 className={`about__description ${
                   activeThemeName
                     ? `about__description--${activeThemeName}`
-                    : ''
+                    : ""
                 }`}
               >
                 En tant que développeur frontend junior, j&apos;ai eu
-                l&apos;occasion d&apos;expérimenter plusieurs technologies{' '}
+                l&apos;occasion d&apos;expérimenter plusieurs technologies{" "}
                 <span
                   className={`about__description__span ${
                     activeThemeName
                       ? `about__description__span--${activeThemeName}`
-                      : ''
+                      : ""
                   }`}
                 >
                   frontend et backend
-                </span>{' '}
-                sur les différents projets sur lesquels j&apos;ai pu travailler.{' '}
+                </span>{" "}
+                sur les différents projets sur lesquels j&apos;ai pu travailler.{" "}
                 <br />
                 <br />
-                L&apos;approche{' '}
+                L&apos;approche{" "}
                 <span
                   className={`about__description__span ${
                     activeThemeName
                       ? `about__description__span--${activeThemeName}`
-                      : ''
+                      : ""
                   }`}
                 >
                   pragmatique et artistique
-                </span>{' '}
+                </span>{" "}
                 nécessaires à la conception de sites web sont ce qui me plaît le
-                plus. Ce mélange intéressant de qualités que demandent{' '}
+                plus. Ce mélange intéressant de qualités que demandent{" "}
                 <span
                   className={`about__description__span ${
                     activeThemeName
                       ? `about__description__span--${activeThemeName}`
-                      : ''
+                      : ""
                   }`}
                 >
                   le design et création
-                </span>{' '}
+                </span>{" "}
                 d&apos;un site web fait directement écho au travail de
                 l&apos;artisan, minutieusement travaillé et inventif.
                 <br /> <br />
-                J&apos;approche chacun des projets qui me sont confiés avec{' '}
+                J&apos;approche chacun des projets qui me sont confiés avec{" "}
                 <span
                   className={`about__description__span ${
                     activeThemeName
                       ? `about__description__span--${activeThemeName}`
-                      : ''
+                      : ""
                   }`}
                 >
                   rigueur et communication
@@ -204,7 +206,7 @@ export default function Home() {
             </div>
             <div
               className={`about__image ${
-                activeThemeName ? `about__image--${activeThemeName}` : ''
+                activeThemeName ? `about__image--${activeThemeName}` : ""
               }`}
               onMouseEnter={() => setImageHovered(true)}
               onMouseLeave={() => setImageHovered(false)}
@@ -231,33 +233,33 @@ export default function Home() {
         </section>
         <section
           className={`contact ${
-            activeThemeName ? `contact--${activeThemeName}` : ''
+            activeThemeName ? `contact--${activeThemeName}` : ""
           }`}
           id="contact"
         >
           <div
             className={`contact__title ${
-              activeThemeName ? `contact__title--${activeThemeName}` : ''
+              activeThemeName ? `contact__title--${activeThemeName}` : ""
             }`}
           >
             <span
               className={`contact__title__span ${
                 activeThemeName
                   ? `contact__title__span--${activeThemeName}`
-                  : ''
+                  : ""
               }`}
             >
-              {'> '}
+              {"> "}
             </span>
             Me contacter
           </div>
           <div
             className={`contact__description ${
-              activeThemeName ? `contact__description--${activeThemeName}` : ''
+              activeThemeName ? `contact__description--${activeThemeName}` : ""
             }`}
           >
             Si vous souhaitez me parler à propos d&apos;un projet ou si vous
-            avez une question, n&apos;hésitez pas à m'écrire :-{')'}
+            avez une question, n&apos;hésitez pas à m'écrire :-{")"}
           </div>
           <a href="mailto:garcia.gvj@gmail.com">
             <button className="button__style--1__small">Contactez-moi !</button>

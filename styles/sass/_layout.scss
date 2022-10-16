@@ -23,7 +23,7 @@
   &__title {
     color: $color--secondary;
 
-    font-family: 'Milgran';
+    font-family: "Milgran";
     line-height: 95%;
     font-size: 8.2rem;
     word-spacing: -0.5rem;
@@ -40,14 +40,15 @@
     margin-bottom: 1.5rem;
 
     line-height: 105%;
-    font-family: 'Ikaros';
+    font-family: "Ikaros";
 
     font-size: 2rem;
     z-index: 2;
   }
 }
 .work {
-  padding: 8rem;
+  padding: 12rem 0rem;
+
   background-color: $color--primary;
 
   display: flex;
@@ -55,7 +56,6 @@
   align-items: center;
   justify-content: center;
   grid-gap: 10rem;
-  margin-bottom: -5rem;
 
   &__projet {
     display: grid;
@@ -67,7 +67,7 @@
 
       color: $color--tertiary--4;
 
-      font-family: 'Ikaros';
+      font-family: "Ikaros";
       line-height: 95%;
       font-size: 2.7rem;
       font-weight: 300;
@@ -109,7 +109,7 @@
       // border-right: 1px solid $color--quaternary;
       border-top: 1px solid $color--quaternary;
 
-      font-family: 'Ikaros';
+      font-family: "Ikaros";
       z-index: 2;
 
       box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
@@ -138,7 +138,7 @@
         position: relative;
 
         &::after {
-          content: '';
+          content: "";
           position: absolute;
           top: 0;
           left: 0;
@@ -212,7 +212,7 @@
 
     color: $color--tertiary--4;
 
-    font-family: 'Ikaros';
+    font-family: "Ikaros";
     line-height: 95%;
     font-size: 3.5rem;
     // word-spacing: rem;
@@ -230,7 +230,7 @@
     cursor: pointer;
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
@@ -248,7 +248,7 @@
     background-color: $color--primary--2;
     color: rgb(198, 204, 224);
 
-    font-family: 'Ikaros';
+    font-family: "Ikaros";
     z-index: 2;
 
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
@@ -258,7 +258,7 @@
 }
 
 .contact {
-  padding: 20rem 8rem;
+  padding: 12rem 0 25rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -267,27 +267,29 @@
   grid-gap: 1.8rem;
 
   &__description {
+    font-size: 1.8rem;
     text-align: center;
     width: 55rem;
     // background-color: $color--primary--2;
     color: rgb(160, 168, 194);
 
-    font-family: 'Ikaros';
+    font-family: "Ikaros";
     z-index: 2;
 
     border-radius: 5px;
+    margin-bottom: 3rem;
   }
 
   &__title {
     z-index: 2;
     margin-left: -2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.3rem;
 
     color: $color--tertiary--4;
 
-    font-family: 'Milgran';
+    font-family: "Milgran";
     line-height: 95%;
-    font-size: 3.6rem;
+    font-size: 4.3rem;
     font-weight: 300;
     letter-spacing: -0.15rem;
 
@@ -295,7 +297,7 @@
 
     &::after {
       position: absolute;
-      content: '';
+      content: "";
       bottom: -8px;
       left: 80%;
       width: 25%;
