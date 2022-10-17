@@ -1,10 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
 
-import {
-  AiFillMail as MailIcon,
-  AiFillLinkedin as LinkedinIcon,
-} from 'react-icons/ai';
+import { AiFillMail as MailIcon } from 'react-icons/ai';
+import { FaLinkedinIn as LinkedinIcon } from 'react-icons/fa';
+import { BsYoutube as YoutubeIcon } from 'react-icons/bs';
 
 import logo from '../public/img/logo.png';
 
@@ -74,6 +73,9 @@ export default function Nav({ activeThemeName, activeSection }) {
         </a>
         <a href="https://www.linkedin.com/in/gabriel-garcia-3081b9246/">
           <LinkedinIcon className="nav__link" />
+        </a>
+        <a href="https://www.youtube.com/channel/UC09fH0GvtBagm7oGY5wilzA">
+          <YoutubeIcon className="nav__link" />
         </a>
       </div>
     </nav>

@@ -2,6 +2,7 @@
 .work__projet__title,
 .work__projet__description,
 .work__projet__span,
+.work__projet__external-link,
 .nav,
 .nav__menu__item,
 .home,
@@ -27,6 +28,13 @@
 
   &--collectifregina {
     background-color: #fde4cf;
+  }
+  &--leproductif {
+    background-color: #dbdbdb;
+  }
+
+  &--gabrielg {
+    background-color: #001a2e;
   }
 
   &--photomoi {
@@ -94,9 +102,15 @@
     }
   }
 
+  &--leproductif {
+    &:after {
+      background-color: rgb(92, 103, 128);
+    }
+  }
+
   &--collectifregina {
     &:after {
-      background-color: rgb(0, 0, 0);
+      background-color: #ffffff;
     }
   }
 
@@ -120,6 +134,12 @@
 .work__projet__title {
   &--collectifregina {
     color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0.274) 0px 5px 20px;
+  }
+
+  &--leproductif {
+    color: #ffffff;
+    text-shadow: rgba(0, 0, 0, 0.274) 0px 5px 20px;
   }
 }
 
@@ -141,8 +161,12 @@
     color: rgb(177, 3, 177);
   }
 
-  &--rethacolt {
-    color: #ff5100;
+  &--leproductif {
+    color: #3871d4;
+  }
+
+  &--gabrielg {
+    color: $color--secondary--3;
   }
 
   &--photomoi {
@@ -166,18 +190,53 @@
 
   &--collectifregina {
     background-color: rgb(141, 49, 141);
-    border-top: none;
+    border-top: 1px solid transparent;
     color: #ffffff;
     box-shadow: none;
   }
 
-  &--rethacolt {
-    border-top: 1px solid rgb(250, 188, 56);
+  &--leproductif {
+    border-top: 1px solid transparent;
+    background-color: #3871d4;
+    color: #ffffff;
   }
+
+  &--gabrielg {
+    border-top: 1px solid transparent;
+    background-color: #002e53;
+  }
+
   &--photomoi {
     color: rgb(161, 161, 161);
     background-color: #000000;
     box-shadow: none;
+  }
+}
+
+// Work projet external link
+.work__projet__external-link {
+  &--codingtutors {
+    color: #f5cc46;
+  }
+
+  &--mathieuhue {
+    color: #f5cc46;
+  }
+
+  &--collectifregina {
+    color: rgb(177, 3, 177);
+  }
+
+  &--leproductif {
+    color: #1c5dce;
+  }
+
+  &--gabrielg {
+    color: rgb(209, 206, 206);
+  }
+
+  &--photomoi {
+    color: grey;
   }
 }
 
@@ -208,8 +267,13 @@
     color: rgb(126, 0, 126);
   }
 
-  &--rethacolt {
-    color: rgb(250, 117, 56);
+  &--leproductif {
+    padding: 0.3rem 0.7rem;
+    background-color: #ffffff;
+    color: #3871d4;
+  }
+  &--gabrielg {
+    color: $color--secondary--3;
   }
 
   &--photomoi {
@@ -239,6 +303,16 @@
     background-color: #ffffff;
   }
 
+  &--leproductif {
+    background-color: #3871d4;
+    color: #ffffff;
+  }
+
+  &--gabrielg {
+    background-color: #ffffff;
+    color: $color--primary--2;
+  }
+
   &--photomoi {
     color: #000000;
     background-color: #ffffff;
@@ -259,6 +333,14 @@
   &--collectifregina {
     background-color: #661c6b;
     color: #ffffff;
+  }
+  &--leproductif {
+    background-color: #f0f0f0;
+    color: #2755a5;
+  }
+
+  &--gabrielg {
+    background-color: #02325b;
   }
 
   &--photomoi {

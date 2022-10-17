@@ -4,8 +4,9 @@ import Projet from '../components/Projet';
 import mathieuHue from '../public/img/mathieuhue.png';
 import codingTutors from '../public/img/codingtutors.png';
 import collectifRegina from '../public/img/collectifregina4.png';
-import rethaColt from '../public/img/rethacolt.png';
+// import rethaColt from '../public/img/rethacolt.png';
 import ggarcia from '../public/img/ggarcia.png';
+import leproductif from '../public/img/leproductif.jpg';
 
 const projects = [
   {
@@ -21,7 +22,7 @@ const projects = [
     ],
     technologies: ['react', 'nextjs', 'firebase', 'SASS'],
     imageSrc: codingTutors,
-    url: 'codingtutors.io',
+    url: 'https://coding-tutors.netlify.app/',
   },
   {
     titre: 'Mathieu Hue',
@@ -36,7 +37,7 @@ const projects = [
     ],
     technologies: ['react', 'SASS'],
     imageSrc: mathieuHue,
-    url: 'codingtutors.io',
+    url: 'https://sad-jang-450125.netlify.app/',
   },
   {
     titre: 'Collectif Régina',
@@ -66,20 +67,7 @@ const projects = [
     imageSrc: collectifRegina,
     url: 'codingtutors.io',
   },
-  {
-    titre: 'Rethacolt',
-    projectClass: 'rethacolt',
-    description: [
-      { text: 'Rethacolt est un ', span: false },
-      { text: 'portfolio', span: true },
-      { text: ' exposant toutes les ', span: false },
-      { text: 'photographies', span: true },
-      { text: " de l'artiste du même nom", span: false },
-    ],
-    technologies: ['javascript', 'SASS'],
-    imageSrc: rethaColt,
-    url: 'codingtutors.io',
-  },
+
   {
     titre: 'Le Productif',
     projectClass: 'leproductif',
@@ -97,8 +85,8 @@ const projects = [
       { text: " et bien d'autres fonctionnalités.", span: false },
     ],
     technologies: ['react', 'express', 'nodejs', 'mongoDB', 'SASS'],
-    imageSrc: rethaColt,
-    url: 'codingtutors.io',
+    imageSrc: leproductif,
+    // url: '',
   },
 
   {
@@ -114,8 +102,22 @@ const projects = [
     ],
     technologies: ['react', 'nextjs', 'firebase'],
     imageSrc: ggarcia,
-    url: 'codingtutors.io',
+    url: 'localhost:3000',
   },
+  // {
+  //   titre: 'Rethacolt',
+  //   projectClass: 'rethacolt',
+  //   description: [
+  //     { text: 'Rethacolt est un ', span: false },
+  //     { text: 'portfolio', span: true },
+  //     { text: ' exposant toutes les ', span: false },
+  //     { text: 'photographies', span: true },
+  //     { text: " de l'artiste du même nom.", span: false },
+  //   ],
+  //   technologies: ['javascript', 'SASS'],
+  //   imageSrc: rethaColt,
+  //   url: 'codingtutors.io',
+  // },
   // description:[{text: '', span: false},{text: '', span: true},{text: '', span: false},],
   // {
   //   titre: 'Wordle',

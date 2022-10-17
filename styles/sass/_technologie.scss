@@ -63,19 +63,32 @@
     }
   }
 
-  &__rethacolt {
-    &--javascript {
-      background-color: #f7994b;
+  &__leproductif {
+    &--react {
+      background-color: #e32862;
+    }
+
+    &--express {
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    &--nodejs {
+      background-color: #1c4a8d;
+    }
+
+    &--mongoDB {
+      background-color: #3871d4;
     }
 
     &--SASS {
-      background-color: #008f3b;
+      background-color: #414141;
     }
   }
 
   &__gabrielg {
     &--react {
-      background-color: $color--primary--3;
+      background-color: #003a69;
     }
 
     &--nextjs {

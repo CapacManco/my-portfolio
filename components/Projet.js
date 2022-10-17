@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
+import { FiExternalLink as ExtLinkIcon } from 'react-icons/fi';
 
 import Technologie from '../components/Technologie';
 
@@ -58,24 +59,26 @@ const Projet = ({
       <div
         className={`work__projet__image__container work__projet__image__container--${imagePosition}`}
       >
-        <div
-          className={`work__projet__image__container--fix ${
-            activeThemeName
-              ? `work__projet__image__container--fix--${activeThemeName}`
-              : ''
-          }`}
-          onMouseEnter={() => setProjectHover(true)}
-          onMouseLeave={() => setProjectHover(false)}
-        >
-          <Image
-            className="work__projet__image"
-            src={imageSrc}
-            height="500"
-            width="1000"
-            // layout="fill"
-            objectFit="contain"
-          />
-        </div>
+        <a href={url} className="work__projet__link">
+          <div
+            className={`work__projet__image__container--fix ${
+              activeThemeName
+                ? `work__projet__image__container--fix--${activeThemeName}`
+                : ''
+            }`}
+            onMouseEnter={() => setProjectHover(true)}
+            onMouseLeave={() => setProjectHover(false)}
+          >
+            <Image
+              className="work__projet__image"
+              src={imageSrc}
+              height="500"
+              width="1000"
+              // layout="fill"
+              objectFit="contain"
+            />
+          </div>
+        </a>
       </div>
       <div
         className={`work__projet__infos work__projet__infos--${infosPosition}`}
@@ -108,6 +111,15 @@ const Projet = ({
         <div className="work__projet__technologies">
           {renderTechnologies(technologies)}
         </div>
+        <a href={url} className="work__projet__link">
+          <ExtLinkIcon
+            className={`work__projet__external-link ${
+              activeThemeName
+                ? `work__projet__external-link--${activeThemeName}`
+                : ''
+            }`}
+          />
+        </a>
       </div>
     </div>
   );
