@@ -102,7 +102,7 @@ const projects = [
     ],
     technologies: ['react', 'nextjs', 'firebase'],
     imageSrc: ggarcia,
-    url: 'localhost:3000',
+    url: '',
   },
   // {
   //   titre: 'Rethacolt',
