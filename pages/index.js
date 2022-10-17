@@ -257,7 +257,7 @@ export default function Home() {
             }`}
           >
             Si vous souhaitez me parler à propos d&apos;un projet ou si vous
-            avez une question, n&apos;hésitez pas à m'écrire :-{')'}
+            avez une question, n&apos;hésitez pas à m&apos;écrire :-{')'}
           </div>
           <a href="mailto:garcia.gvj@gmail.com">
             <button className="button__style--1__small">Contactez-moi !</button>

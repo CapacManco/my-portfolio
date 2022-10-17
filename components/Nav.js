@@ -25,8 +25,10 @@ export default function Nav({ activeThemeName, activeSection }) {
         <a href="#home" className="nav__menu__link">
           <li
             className={`nav__menu__item ${
-              activeSection === 'home'
-                ? `active active--${activeThemeName}`
+              activeSection === 'home' ? `active` : ''
+            } ${
+              activeThemeName && activeSection === 'home'
+                ? `active--${activeThemeName}`
                 : ''
             }`}
           >
@@ -36,8 +38,10 @@ export default function Nav({ activeThemeName, activeSection }) {
         <a href="#work" className="nav__menu__link">
           <li
             className={`nav__menu__item ${
-              activeSection === 'work'
-                ? `active active--${activeThemeName}`
+              activeSection === 'work' ? `active` : ''
+            } ${
+              activeThemeName && activeSection === 'work'
+                ? `active--${activeThemeName}`
                 : ''
             }`}
           >
@@ -47,8 +51,10 @@ export default function Nav({ activeThemeName, activeSection }) {
         <a href="#about" className="nav__menu__link">
           <li
             className={`nav__menu__item ${
-              activeSection === 'about'
-                ? `active active--${activeThemeName}`
+              activeSection === 'about' ? `active` : ''
+            } ${
+              activeThemeName && activeSection === 'about'
+                ? `active--${activeThemeName}`
                 : ''
             }`}
           >
@@ -58,8 +64,10 @@ export default function Nav({ activeThemeName, activeSection }) {
         <a href="#contact" className="nav__menu__link">
           <li
             className={`nav__menu__item ${
-              activeSection === 'contact'
-                ? `active active--${activeThemeName}`
+              activeSection === 'contact' ? `active` : ''
+            } ${
+              activeThemeName && activeSection === 'contact'
+                ? `active--${activeThemeName}`
                 : ''
             }`}
           >

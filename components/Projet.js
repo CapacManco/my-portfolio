@@ -75,7 +75,7 @@ const Projet = ({
               height="500"
               width="1000"
               // layout="fill"
-              objectFit="contain"
+              objectFit="cover"
             />
           </div>
         </a>
