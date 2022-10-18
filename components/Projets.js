@@ -4,7 +4,6 @@ import Projet from '../components/Projet';
 import mathieuHue from '../public/img/mathieuhue.png';
 import codingTutors from '../public/img/codingtutors.png';
 import collectifRegina from '../public/img/collectifregina4.png';
-// import rethaColt from '../public/img/rethacolt.png';
 import ggarcia from '../public/img/ggarcia.png';
 import leproductif from '../public/img/leproductif.jpg';
 
@@ -65,7 +64,7 @@ const projects = [
 
     technologies: ['javascript', 'express', 'MySQL', 'nodejs', 'SASS'],
     imageSrc: collectifRegina,
-    url: 'codingtutors.io',
+    url: 'http://3.21.122.101:3000/',
   },
 
   {
@@ -104,29 +103,6 @@ const projects = [
     imageSrc: ggarcia,
     url: '',
   },
-  // {
-  //   titre: 'Rethacolt',
-  //   projectClass: 'rethacolt',
-  //   description: [
-  //     { text: 'Rethacolt est un ', span: false },
-  //     { text: 'portfolio', span: true },
-  //     { text: ' exposant toutes les ', span: false },
-  //     { text: 'photographies', span: true },
-  //     { text: " de l'artiste du même nom.", span: false },
-  //   ],
-  //   technologies: ['javascript', 'SASS'],
-  //   imageSrc: rethaColt,
-  //   url: 'codingtutors.io',
-  // },
-  // description:[{text: '', span: false},{text: '', span: true},{text: '', span: false},],
-  // {
-  //   titre: 'Wordle',
-  //   description:
-  //     "Le Productif est un outil conçu pour accroître ma productivité ainsi que mon efficacité. Il comprend un calendrier, une liste de tâches personnalisable, une page d'évaluation et bien d'autres fonctionnalités.",
-  //   technologies: ['react', 'nextjs', 'javascript'],
-  //   imageSrc: rethaColt,
-  //   url: 'codingtutors.io',
-  // },
 ];
 
 const Projets = ({ projectsHovered, setProjectsHovered, activeThemeName }) => {
