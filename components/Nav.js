@@ -11,68 +11,40 @@ import logo from '../public/img/logo.png';
 // About
 // Work
 // Contact
-export default function Nav({ activeThemeName, activeSection }) {
+export default function Nav({
+  activeThemeName,
+  activeSection,
+  mediaQueryAnimation,
+  renderMediaQueryStyle,
+}) {
+  const renderMediaQueryUlStyle = (section) => {
+    if (!mediaQueryAnimation) {
+      return `nav__menu__item ${activeSection === section ? `active` : ''}`;
+    }
+    return `nav__menu__item ${activeSection === section ? `active` : ''} ${
+      activeThemeName && activeSection === section
+        ? `active--${activeThemeName}`
+        : ''
+    }`;
+  };
+
   return (
-    <nav className={`nav ${activeThemeName ? `nav--${activeThemeName}` : ''}`}>
+    <nav className={renderMediaQueryStyle('nav')}>
       <div className="nav__logo">
         {/* <Image src={logo} height="600" width="600" /> */}
       </div>
-      <ul
-        className={`nav__menu ${
-          activeThemeName ? `nav__menu--${activeThemeName}` : ''
-        }`}
-      >
+      <ul className={renderMediaQueryStyle('nav__menu')}>
         <a href="#home" className="nav__menu__link">
-          <li
-            className={`nav__menu__item ${
-              activeSection === 'home' ? `active` : ''
-            } ${
-              activeThemeName && activeSection === 'home'
-                ? `active--${activeThemeName}`
-                : ''
-            }`}
-          >
-            Accueil
-          </li>
+          <li className={renderMediaQueryUlStyle('home')}>Accueil</li>
         </a>
         <a href="#work" className="nav__menu__link">
-          <li
-            className={`nav__menu__item ${
-              activeSection === 'work' ? `active` : ''
-            } ${
-              activeThemeName && activeSection === 'work'
-                ? `active--${activeThemeName}`
-                : ''
-            }`}
-          >
-            Projets
-          </li>
+          <li className={renderMediaQueryUlStyle('work')}>Projets</li>
         </a>
         <a href="#about" className="nav__menu__link">
-          <li
-            className={`nav__menu__item ${
-              activeSection === 'about' ? `active` : ''
-            } ${
-              activeThemeName && activeSection === 'about'
-                ? `active--${activeThemeName}`
-                : ''
-            }`}
-          >
-            À propos
-          </li>
+          <li className={renderMediaQueryUlStyle('about')}>À propos</li>
         </a>
         <a href="#contact" className="nav__menu__link">
-          <li
-            className={`nav__menu__item ${
-              activeSection === 'contact' ? `active` : ''
-            } ${
-              activeThemeName && activeSection === 'contact'
-                ? `active--${activeThemeName}`
-                : ''
-            }`}
-          >
-            Contact
-          </li>
+          <li className={renderMediaQueryUlStyle('contact')}>Contact</li>
         </a>
       </ul>
       <div className="nav__links">

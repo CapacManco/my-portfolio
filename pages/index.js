@@ -22,6 +22,18 @@ export default function Home() {
 
   const [activeThemeName, setActiveThemeName] = useState(null);
   const [activeSection, setActiveSection] = useState('home');
+  const [mediaQueryAnimation, setMediaQueryAnimation] = useState(null);
+  const [mediaQueryNextImg, setMediaQueryNextImg] = useState(null);
+
+  useEffect(() => {
+    window.innerWidth >= 768
+      ? setMediaQueryAnimation(true)
+      : setMediaQueryAnimation(false);
+
+    window.innerWidth <= 576
+      ? setMediaQueryNextImg(true)
+      : setMediaQueryNextImg(false);
+  }, []);
 
   useEffect(() => {
     const checkClassNameHovered = () => {
@@ -76,6 +88,13 @@ export default function Home() {
     setProjectsHovered({ ...projectsHovered, ['photomoi']: boolean });
   };
 
+  const renderMediaQueryStyle = (className) => {
+    if (!mediaQueryAnimation) return className;
+    return `${className} ${
+      activeThemeName ? `${className}--${activeThemeName}` : ''
+    }`;
+  };
+
   return (
     <div>
       <Head>
@@ -84,15 +103,19 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Nav activeThemeName={activeThemeName} activeSection={activeSection} />
+      <Nav
+        activeThemeName={activeThemeName}
+        activeSection={activeSection}
+        mediaQueryAnimation={mediaQueryAnimation}
+        renderMediaQueryStyle={renderMediaQueryStyle}
+      />
       <main className="layout">
-        <div
-          className={`home ${
-            activeThemeName ? `home--${activeThemeName}` : ''
-          }`}
-          id="home"
-        >
-          <Bubbles activeThemeName={activeThemeName} />
+        <div className={renderMediaQueryStyle('home')} id="home">
+          <Bubbles
+            activeThemeName={activeThemeName}
+            mediaQueryAnimation={mediaQueryAnimation}
+            renderMediaQueryStyle={renderMediaQueryStyle}
+          />
           <p className="home__title">
             Hey, <br />
             Je suis
@@ -122,43 +145,25 @@ export default function Home() {
           projectsHovered={projectsHovered}
           setProjectsHovered={setProjectsHovered}
           activeThemeName={activeThemeName}
+          mediaQueryAnimation={mediaQueryAnimation}
+          mediaQueryNextImg={mediaQueryNextImg}
+          renderMediaQueryStyle={renderMediaQueryStyle}
         />
 
-        <section
-          className={`about ${
-            activeThemeName ? `about--${activeThemeName}` : ''
-          }`}
-          id="about"
-        >
+        <section className={renderMediaQueryStyle('about')} id="about">
           <div className="about__container">
             <div className="about__infos">
               <p className="about__title">
-                <span
-                  className={`about__title__span ${
-                    activeThemeName
-                      ? `about__title__span--${activeThemeName}`
-                      : ''
-                  }`}
-                >
+                <span className={renderMediaQueryStyle('about__title__span')}>
                   {'> '}
                 </span>
                 Qui suis-je ?
               </p>
-              <div
-                className={`about__description ${
-                  activeThemeName
-                    ? `about__description--${activeThemeName}`
-                    : ''
-                }`}
-              >
+              <div className={renderMediaQueryStyle('about__description')}>
                 En tant que développeur frontend junior, j&apos;ai eu
                 l&apos;occasion d&apos;expérimenter plusieurs technologies{' '}
                 <span
-                  className={`about__description__span ${
-                    activeThemeName
-                      ? `about__description__span--${activeThemeName}`
-                      : ''
-                  }`}
+                  className={renderMediaQueryStyle('about__description__span')}
                 >
                   frontend et backend
                 </span>{' '}
@@ -167,22 +172,14 @@ export default function Home() {
                 <br />
                 L&apos;approche{' '}
                 <span
-                  className={`about__description__span ${
-                    activeThemeName
-                      ? `about__description__span--${activeThemeName}`
-                      : ''
-                  }`}
+                  className={renderMediaQueryStyle('about__description__span')}
                 >
                   pragmatique et artistique
                 </span>{' '}
                 nécessaires à la conception de sites web sont ce qui me plaît le
                 plus. Ce mélange intéressant de qualités que demandent{' '}
                 <span
-                  className={`about__description__span ${
-                    activeThemeName
-                      ? `about__description__span--${activeThemeName}`
-                      : ''
-                  }`}
+                  className={renderMediaQueryStyle('about__description__span')}
                 >
                   le design et création
                 </span>{' '}
@@ -191,11 +188,7 @@ export default function Home() {
                 <br /> <br />
                 J&apos;approche chacun des projets qui me sont confiés avec{' '}
                 <span
-                  className={`about__description__span ${
-                    activeThemeName
-                      ? `about__description__span--${activeThemeName}`
-                      : ''
-                  }`}
+                  className={renderMediaQueryStyle('about__description__span')}
                 >
                   rigueur et communication
                 </span>
@@ -203,21 +196,10 @@ export default function Home() {
               </div>
             </div>
             <div
-              className={`about__image ${
-                activeThemeName ? `about__image--${activeThemeName}` : ''
-              }`}
+              className={renderMediaQueryStyle('about__image')}
               onMouseEnter={() => setImageHovered(true)}
               onMouseLeave={() => setImageHovered(false)}
             >
-              {/* <div
-                className={`about__image__container ${
-                  activeThemeName
-                    ? `about__image__container--${activeThemeName}`
-                    : ''
-                }`}
-                onMouseEnter={() => setProjectHover(true)}
-                onMouseLeave={() => setProjectHover(false)}
-              > */}
               <Image
                 src={photoMoi}
                 width="1500"
@@ -225,37 +207,17 @@ export default function Home() {
                 layout="fill"
                 objectFit="cover"
               />
-              {/* </div> */}
             </div>
           </div>
         </section>
-        <section
-          className={`contact ${
-            activeThemeName ? `contact--${activeThemeName}` : ''
-          }`}
-          id="contact"
-        >
-          <div
-            className={`contact__title ${
-              activeThemeName ? `contact__title--${activeThemeName}` : ''
-            }`}
-          >
-            <span
-              className={`contact__title__span ${
-                activeThemeName
-                  ? `contact__title__span--${activeThemeName}`
-                  : ''
-              }`}
-            >
+        <section className={renderMediaQueryStyle('contact')} id="contact">
+          <div className={renderMediaQueryStyle('contact__title')}>
+            <span className={renderMediaQueryStyle('contact__title__span')}>
               {'> '}
             </span>
             Me contacter
           </div>
-          <div
-            className={`contact__description ${
-              activeThemeName ? `contact__description--${activeThemeName}` : ''
-            }`}
-          >
+          <div className={renderMediaQueryStyle('contact__description')}>
             Si vous souhaitez me parler à propos d&apos;un projet ou si vous
             avez une question, n&apos;hésitez pas à m&apos;écrire :-{')'}
           </div>

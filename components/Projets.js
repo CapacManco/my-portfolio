@@ -105,7 +105,14 @@ const projects = [
   },
 ];
 
-const Projets = ({ projectsHovered, setProjectsHovered, activeThemeName }) => {
+const Projets = ({
+  projectsHovered,
+  setProjectsHovered,
+  activeThemeName,
+  mediaQueryAnimation,
+  mediaQueryNextImg,
+  renderMediaQueryStyle,
+}) => {
   const numOfProjects = projects.length;
   const [numProjectsShown, setNumProjectsShown] = useState(3);
   const [allProjectsShown, setAllProjectsShown] = useState(false);
@@ -131,6 +138,9 @@ const Projets = ({ projectsHovered, setProjectsHovered, activeThemeName }) => {
           projectsHovered={projectsHovered}
           setProjectsHovered={setProjectsHovered}
           activeThemeName={activeThemeName}
+          mediaQueryAnimation={mediaQueryAnimation}
+          mediaQueryNextImg={mediaQueryNextImg}
+          renderMediaQueryStyle={renderMediaQueryStyle}
         />
       );
     });
@@ -149,18 +159,11 @@ const Projets = ({ projectsHovered, setProjectsHovered, activeThemeName }) => {
   };
 
   return (
-    <section
-      className={`work ${activeThemeName ? `work--${activeThemeName}` : ''}`}
-      id="work"
-    >
+    <section className={renderMediaQueryStyle('work')} id="work">
       {renderProjects()}
       {!allProjectsShown && (
         <button
-          className={`button__style--2__medium ${
-            activeThemeName
-              ? `button__style--2__medium--${activeThemeName}`
-              : ''
-          }`}
+          className={renderMediaQueryStyle('button__style--2__medium')}
           onClick={() => showMoreProjects()}
         >
           Voir plus

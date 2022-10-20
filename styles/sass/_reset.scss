@@ -9,6 +9,18 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+
+  @include xl {
+    font-size: 59.375%; //1 rem = 9px, 9/16 = 56.25%
+  }
+
+  @include lg {
+    // font-size: 56.25%; //1 rem = 8px, 8/16 = 50%
+  }
+
+  @include sm {
+    // font-size: 40%;
+  }
 }
 
 body {

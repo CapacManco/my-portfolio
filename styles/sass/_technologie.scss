@@ -11,6 +11,14 @@
   cursor: pointer;
   transition: all 0.4s;
 
+  @include md {
+    filter: grayscale(0%);
+  }
+
+  @include sm {
+    font-size: 1.3rem;
+  }
+
   &__codingtutors {
     &--react {
       background-color: blue;
@@ -82,7 +90,7 @@
     }
 
     &--SASS {
-      background-color: #414141;
+      background-color: #0f0f0f;
     }
   }
 

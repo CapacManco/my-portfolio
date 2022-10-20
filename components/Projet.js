@@ -15,6 +15,9 @@ const Projet = ({
   projectsHovered,
   setProjectsHovered,
   activeThemeName,
+  mediaQueryAnimation,
+  mediaQueryNextImg,
+  renderMediaQueryStyle,
 }) => {
   const numberOfProject = number + 1;
   const imagePosition = numberOfProject % 2 === 0 ? 'right' : 'left';
@@ -28,6 +31,7 @@ const Projet = ({
           technologie={technologie}
           projectClass={projectClass}
           activeThemeName={activeThemeName}
+          mediaQueryAnimation={mediaQueryAnimation}
         />
       );
     });
@@ -37,12 +41,7 @@ const Projet = ({
     return description.map((descriptionPart, i) => {
       if (descriptionPart.span)
         return (
-          <span
-            key={i}
-            className={`work__projet__span  ${
-              activeThemeName ? `work__projet__span--${activeThemeName}` : ''
-            }`}
-          >
+          <span key={i} className={renderMediaQueryStyle('work__projet__span')}>
             {descriptionPart.text}
           </span>
         );
@@ -54,6 +53,30 @@ const Projet = ({
     setProjectsHovered({ ...projectsHovered, [`${projectClass}`]: boolean });
   };
 
+  const renderMediaQueryImg = () => {
+    if (!mediaQueryNextImg)
+      return (
+        <Image
+          className="work__projet__image"
+          src={imageSrc}
+          height="500"
+          width="1000"
+          // layout="fill"
+          objectFit="cover"
+        />
+      );
+    return (
+      <Image
+        className="work__projet__image"
+        src={imageSrc}
+        height="500"
+        width="1000"
+        layout="fill"
+        objectFit="cover"
+      />
+    );
+  };
+
   return (
     <div className="work__projet">
       <div
@@ -61,22 +84,13 @@ const Projet = ({
       >
         <a href={url} className="work__projet__link">
           <div
-            className={`work__projet__image__container--fix ${
-              activeThemeName
-                ? `work__projet__image__container--fix--${activeThemeName}`
-                : ''
-            }`}
+            className={renderMediaQueryStyle(
+              'work__projet__image__container--fix'
+            )}
             onMouseEnter={() => setProjectHover(true)}
             onMouseLeave={() => setProjectHover(false)}
           >
-            <Image
-              className="work__projet__image"
-              src={imageSrc}
-              height="500"
-              width="1000"
-              // layout="fill"
-              objectFit="cover"
-            />
+            {renderMediaQueryImg()}
           </div>
         </a>
       </div>
@@ -88,24 +102,12 @@ const Projet = ({
             activeThemeName ? `work__projet__title--${activeThemeName}` : ''
           }`}
         >
-          <span
-            className={`work__projet__title__span ${
-              activeThemeName
-                ? `work__projet__title__span--${activeThemeName}`
-                : ''
-            }`}
-          >
+          <span className={renderMediaQueryStyle('work__projet__title__span')}>
             0{numberOfProject}.{' '}
           </span>
           {titre}
         </p>
-        <div
-          className={`work__projet__description ${
-            activeThemeName
-              ? `work__projet__description--${activeThemeName}`
-              : ''
-          }`}
-        >
+        <div className={renderMediaQueryStyle('work__projet__description')}>
           {renderDescription(description)}
         </div>
         <div className="work__projet__technologies">
@@ -113,11 +115,7 @@ const Projet = ({
         </div>
         <a href={url} className="work__projet__link">
           <ExtLinkIcon
-            className={`work__projet__external-link ${
-              activeThemeName
-                ? `work__projet__external-link--${activeThemeName}`
-                : ''
-            }`}
+            className={renderMediaQueryStyle('work__projet__external-link')}
           />
         </a>
       </div>

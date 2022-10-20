@@ -1,6 +1,7 @@
 .button {
   &__style--1 {
     &__medium {
+      margin-top: 1.5rem;
       border: none;
       align-self: start;
       padding: 1.2rem 4.5rem;
@@ -33,7 +34,7 @@
 
   &__style--2 {
     &__medium {
-      margin-top: -5rem;
+      // margin-top: rem;
       font-family: 'Ikaros';
       cursor: pointer;
       border: none;
@@ -50,7 +51,7 @@
   &__style--1__medium,
   &__style--1__small,
   &__style--2__medium {
-    transition: all 0.4s ease-in-out;
+    transition: all 0.2s ease-in-out;
     &:hover {
       background-color: $color--primary--5;
     }

@@ -1,19 +1,20 @@
 import React, { useState, useEffect } from 'react';
 
-const Bubbles = ({ activeThemeName }) => {
-  const [mousePosition, setMousePosition] = useState({ left: 0, top: 0 });
+const Bubbles = ({
+  activeThemeName,
+  mediaQueryAnimation,
+  renderMediaQueryStyle,
+}) => {
+  const [mousePosition, setMousePosition] = useState({ left: 250, top: 250 });
   useEffect(() => {
+    if (!mediaQueryAnimation) return;
     document.addEventListener('mousemove', (e) => {
       setMousePosition({ left: e.pageX, top: e.pageY });
     });
-  }, []);
+  }, [mediaQueryAnimation]);
 
   return (
-    <ul
-      className={`bg-bubbles ${
-        activeThemeName ? `bg-bubbles--${activeThemeName}` : ''
-      }`}
-    >
+    <ul className={renderMediaQueryStyle('bg-bubbles')}>
       <li
         style={{
           left: `calc(10% - ${mousePosition.left / 5}px)`,

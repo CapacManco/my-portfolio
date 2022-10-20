@@ -21,6 +21,10 @@
       border-bottom: 1px solid $color--tertiary--2;
       padding: 1.8rem 0;
       cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        color: $color--quaternary;
+      }
     }
 
     &__link {
@@ -51,6 +55,14 @@
   &__link {
     height: 1.6rem;
     width: 1.6rem;
+    transition: all 0.2s;
+    &:hover {
+      color: $color--quaternary;
+    }
+  }
+
+  @include xl {
+    display: none;
   }
 }
 
