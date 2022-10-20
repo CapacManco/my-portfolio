@@ -72,6 +72,8 @@
 
     &__title {
       z-index: 2;
+      display: flex;
+      grid-gap: 1rem;
 
       color: $color--tertiary--4;
 
@@ -300,6 +302,10 @@
         padding: 0;
         background-color: transparent;
         box-shadow: none;
+      }
+
+      &__title > .work__projet__link {
+        margin-top: 1px;
       }
     }
   }

@@ -106,6 +106,13 @@ const Projet = ({
             0{numberOfProject}.{' '}
           </span>
           {titre}
+          {!mediaQueryAnimation && (
+            <a href={url} className="work__projet__link">
+              <ExtLinkIcon
+                className={renderMediaQueryStyle('work__projet__external-link')}
+              />
+            </a>
+          )}
         </p>
         <div className={renderMediaQueryStyle('work__projet__description')}>
           {renderDescription(description)}
@@ -113,11 +120,13 @@ const Projet = ({
         <div className="work__projet__technologies">
           {renderTechnologies(technologies)}
         </div>
-        <a href={url} className="work__projet__link">
-          <ExtLinkIcon
-            className={renderMediaQueryStyle('work__projet__external-link')}
-          />
-        </a>
+        {mediaQueryAnimation && (
+          <a href={url} className="work__projet__link">
+            <ExtLinkIcon
+              className={renderMediaQueryStyle('work__projet__external-link')}
+            />
+          </a>
+        )}
       </div>
     </div>
   );

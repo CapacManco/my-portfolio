@@ -117,6 +117,9 @@ body {
   right: 3rem; }
   .arrow-container__link {
     z-index: 2; }
+  @media (max-width: 768px) {
+    .arrow-container {
+      display: none; } }
 
 .arrow-1 {
   width: 100px;
@@ -440,6 +443,8 @@ body {
     grid-template-rows: 40rem; }
     .work__projet__title {
       z-index: 2;
+      display: flex;
+      grid-gap: 1rem;
       color: rgba(236, 236, 236, 0.795);
       font-family: 'Ikaros';
       line-height: 95%;
@@ -570,7 +575,9 @@ body {
         .work__projet__description {
           padding: 0;
           background-color: transparent;
-          box-shadow: none; } }
+          box-shadow: none; }
+        .work__projet__title > .work__projet__link {
+          margin-top: 1px; } }
   @media (max-width: 576px) {
     .work {
       grid-gap: 3rem; }
