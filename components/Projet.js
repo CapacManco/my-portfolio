@@ -61,7 +61,6 @@ const Projet = ({
           src={imageSrc}
           height="500"
           width="1000"
-          // layout="fill"
           objectFit="cover"
         />
       );

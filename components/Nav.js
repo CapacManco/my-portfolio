@@ -16,6 +16,8 @@ export default function Nav({
   activeSection,
   mediaQueryAnimation,
   renderMediaQueryStyle,
+  isMenuVisible,
+  toggleMobileNav,
 }) {
   const renderMediaQueryUlStyle = (section) => {
     if (!mediaQueryAnimation) {
@@ -29,21 +31,38 @@ export default function Nav({
   };
 
   return (
-    <nav className={renderMediaQueryStyle('nav')}>
-      <div className="nav__logo">
-        {/* <Image src={logo} height="600" width="600" /> */}
-      </div>
+    <menu
+      className={renderMediaQueryStyle('nav')}
+      style={{ display: isMenuVisible ? 'flex' : 'none' }}
+    >
+      <div className="nav__logo"></div>
       <ul className={renderMediaQueryStyle('nav__menu')}>
-        <a href="#home" className="nav__menu__link">
+        <a
+          onClick={() => toggleMobileNav()}
+          href="#home"
+          className="nav__menu__link"
+        >
           <li className={renderMediaQueryUlStyle('home')}>Accueil</li>
         </a>
-        <a href="#work" className="nav__menu__link">
+        <a
+          onClick={() => toggleMobileNav()}
+          href="#work"
+          className="nav__menu__link"
+        >
           <li className={renderMediaQueryUlStyle('work')}>Projets</li>
         </a>
-        <a href="#about" className="nav__menu__link">
+        <a
+          onClick={() => toggleMobileNav()}
+          href="#about"
+          className="nav__menu__link"
+        >
           <li className={renderMediaQueryUlStyle('about')}>À propos</li>
         </a>
-        <a href="#contact" className="nav__menu__link">
+        <a
+          onClick={() => toggleMobileNav()}
+          href="#contact"
+          className="nav__menu__link"
+        >
           <li className={renderMediaQueryUlStyle('contact')}>Contact</li>
         </a>
       </ul>
@@ -58,6 +77,6 @@ export default function Nav({
           <YoutubeIcon className="nav__link" />
         </a>
       </div>
-    </nav>
+    </menu>
   );
 }
