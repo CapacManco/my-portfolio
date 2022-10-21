@@ -33,6 +33,8 @@ export default function Home() {
       if (window.innerWidth <= 1200) {
         setIsMenuVisible(false);
         setMediaQueryMobileNav(true);
+      } else {
+        setMediaQueryMobileNav(false);
       }
 
       window.innerWidth >= 1200
@@ -139,7 +141,10 @@ export default function Home() {
         isMenuVisible={isMenuVisible}
         toggleMobileNav={toggleMobileNav}
       />
-      <MenuToggler toggleMobileNav={toggleMobileNav} />
+      <MenuToggler
+        toggleMobileNav={toggleMobileNav}
+        isMenuVisible={isMenuVisible}
+      />
       <main className="layout">
         <div className={renderMediaQueryStyle('home')} id="home">
           <Bubbles
