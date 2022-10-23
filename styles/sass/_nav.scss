@@ -91,12 +91,12 @@
 
   &--fadein {
     opacity: 1;
-    transition: 0.2s;
+    transition: 0.1s ease-out;
     z-index: 10;
   }
   &--fadeout {
     opacity: 0;
-    transition: 0.2s;
+    transition: 0.1s ease-out;
     z-index: 0;
   }
 }

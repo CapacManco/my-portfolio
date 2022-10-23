@@ -403,11 +403,11 @@ body {
     color: #ffffff; }
   .nav--fadein {
     opacity: 1;
-    transition: 0.2s;
+    transition: 0.1s ease-out;
     z-index: 10; }
   .nav--fadeout {
     opacity: 0;
-    transition: 0.2s;
+    transition: 0.1s ease-out;
     z-index: 0; }
 
 .active {
@@ -784,7 +784,7 @@ body {
 @keyframes fadein {
   0% {
     opacity: 0;
-    margin-left: -3rem; }
+    margin-left: -2rem; }
   100% {
     opacity: 1;
     margin-left: 0; } }
