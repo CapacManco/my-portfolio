@@ -50,7 +50,9 @@ const Projet = ({
   };
 
   const setProjectHover = (boolean) => {
-    setProjectsHovered({ ...projectsHovered, [`${projectClass}`]: boolean });
+    let tempObject = Object.assign({}, projectsHovered);
+    Object.keys(tempObject).forEach((v) => (tempObject[v] = false));
+    setProjectsHovered({ ...tempObject, [`${projectClass}`]: boolean });
   };
 
   const renderMediaQueryImg = () => {

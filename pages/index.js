@@ -239,13 +239,7 @@ export default function Home() {
               onMouseEnter={() => setImageHovered(true)}
               onMouseLeave={() => setImageHovered(false)}
             >
-              <Image
-                src={photoMoi}
-                width="550"
-                height="550"
-                layout="fill"
-                objectFit="cover"
-              />
+              <Image src={photoMoi} layout="fill" objectFit="cover" />
             </div>
           </div>
         </section>
