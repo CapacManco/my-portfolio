@@ -238,8 +238,8 @@ export default function Home() {
             >
               <Image
                 src={photoMoi}
-                width="1500"
-                height="1500"
+                width="550"
+                height="550"
                 layout="fill"
                 objectFit="cover"
               />
