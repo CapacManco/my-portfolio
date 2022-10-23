@@ -26,7 +26,7 @@ export default function Home() {
   const [mediaQueryAnimation, setMediaQueryAnimation] = useState(null);
   const [mediaQueryNextImg, setMediaQueryNextImg] = useState(null);
   const [mediaQueryMobileNav, setMediaQueryMobileNav] = useState(null);
-  const [isMenuVisible, setIsMenuVisible] = useState(true);
+  const [isMenuVisible, setIsMenuVisible] = useState(null);
 
   useEffect(() => {
     const setMediaQueries = () => {
