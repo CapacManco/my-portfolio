@@ -746,6 +746,49 @@ body {
       padding: 10rem 3rem 20rem 3rem;
       grid-gap: 0.5rem; } }
 
+.home__title,
+.home__title--1,
+.home__title--2,
+.home__title--3,
+.home__description,
+.home__button,
+.arrow-container,
+.bg-bubbles {
+  animation-name: fadein;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+  opacity: 0; }
+
+.home__title {
+  animation-delay: 0.4s; }
+  .home__title--1 {
+    animation-delay: 0.5s; }
+  .home__title--2 {
+    animation-delay: 0.6s; }
+  .home__title--3 {
+    animation-delay: 0.7s; }
+
+.home__description {
+  animation-delay: 0.8s; }
+
+.home__button {
+  animation-delay: 0.9s; }
+
+.arrow-container {
+  animation-delay: 1s; }
+
+.bg-bubbles {
+  animation-delay: 0.2s; }
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    margin-left: -3rem; }
+  100% {
+    opacity: 1;
+    margin-left: 0; } }
+
 .work,
 .work__projet__title,
 .work__projet__description,

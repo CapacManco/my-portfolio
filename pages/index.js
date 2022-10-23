@@ -153,17 +153,20 @@ export default function Home() {
             renderMediaQueryStyle={renderMediaQueryStyle}
           />
           <p className="home__title">
-            Hey, <br />
-            Je suis
-            <span className="home__title__span"> Gabriel</span>, <br />
-            développeur web
+            <span className="home__title--1">Hey, </span>
+            <br />
+            <span className="home__title--2">
+              Je suis
+              <span className="home__title__span"> Gabriel</span>, <br />
+            </span>
+            <span className="home__title--3">développeur web</span>
           </p>
           <p className="home__description">
             Je suis un développeur web passionné par le design et la création de
             sites web.
           </p>
           <a href="#contact" className="home__link">
-            <button className="button__style--1__medium">
+            <button className="button__style--1__medium home__button">
               Contactez-moi !
             </button>
           </a>

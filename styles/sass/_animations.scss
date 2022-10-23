@@ -1,0 +1,64 @@
+// variables
+$animation--home--title: 2s;
+
+// classes with duration
+
+.home__title,
+.home__title--1,
+.home__title--2,
+.home__title--3,
+.home__description,
+.home__button,
+.arrow-container,
+.bg-bubbles {
+  animation-name: fadein;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+  opacity: 0;
+}
+
+.home {
+  &__title {
+    animation-delay: 0.4s;
+
+    &--1 {
+      animation-delay: 0.5s;
+    }
+
+    &--2 {
+      animation-delay: 0.6s;
+    }
+    &--3 {
+      animation-delay: 0.7s;
+    }
+  }
+
+  &__description {
+    animation-delay: 0.8s;
+  }
+
+  &__button {
+    animation-delay: 0.9s;
+  }
+}
+
+.arrow-container {
+  animation-delay: 1s;
+}
+
+.bg-bubbles {
+  animation-delay: 0.2s;
+}
+
+// keyframes animation
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    margin-left: -3rem;
+  }
+  100% {
+    opacity: 1;
+    margin-left: 0;
+  }
+}

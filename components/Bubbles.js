@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const Bubbles = ({
-  activeThemeName,
-  mediaQueryAnimation,
-  renderMediaQueryStyle,
-}) => {
+const Bubbles = ({ mediaQueryAnimation, renderMediaQueryStyle }) => {
   const [mousePosition, setMousePosition] = useState({ left: 250, top: 250 });
   useEffect(() => {
     if (!mediaQueryAnimation) return;
