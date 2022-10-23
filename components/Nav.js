@@ -5,12 +5,6 @@ import { AiFillMail as MailIcon } from 'react-icons/ai';
 import { FaLinkedinIn as LinkedinIcon } from 'react-icons/fa';
 import { BsYoutube as YoutubeIcon } from 'react-icons/bs';
 
-import logo from '../public/img/logo.png';
-
-// Home
-// About
-// Work
-// Contact
 export default function Nav({
   activeThemeName,
   activeSection,
@@ -32,8 +26,9 @@ export default function Nav({
 
   return (
     <menu
-      className={renderMediaQueryStyle('nav')}
-      style={{ display: isMenuVisible ? 'flex' : 'none' }}
+      className={`${renderMediaQueryStyle('nav')} ${
+        isMenuVisible ? 'nav--fadein' : 'nav--fadeout'
+      }`}
     >
       <div className="nav__logo"></div>
       <ul className={renderMediaQueryStyle('nav__menu')}>

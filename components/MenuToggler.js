@@ -14,7 +14,7 @@ const MenuToggler = ({ toggleMobileNav, isMenuVisible }) => {
     }
     return (
       <MenuCloseIcon
-        className="nav__responsive__icon"
+        className={`nav__responsive__icon`}
         onClick={() => toggleMobileNav()}
       />
     );
