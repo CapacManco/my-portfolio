@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Projet from '../components/Projet';
 
-import mathieuHue from '../public/img/mathieuhue.png';
-import codingTutors from '../public/img/codingtutors.png';
-import collectifRegina from '../public/img/collectifregina4.png';
-import ggarcia from '../public/img/ggarcia.png';
+import mathieuHue from '../public/img/mathieuhue.jpg';
+import codingTutors from '../public/img/codingtutors.jpg';
+import collectifRegina from '../public/img/collectifregina.jpg';
+import ggarcia from '../public/img/ggarcia.jpg';
 import leproductif from '../public/img/leproductif.jpg';
 
 const projects = [

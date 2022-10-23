@@ -62,6 +62,7 @@ const Projet = ({
           height="500"
           width="1000"
           objectFit="cover"
+          alt={titre}
         />
       );
     return (
@@ -72,6 +73,7 @@ const Projet = ({
         width="1000"
         layout="fill"
         objectFit="cover"
+        alt={titre}
       />
     );
   };
