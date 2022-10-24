@@ -199,7 +199,7 @@ export default function Home() {
                 Qui suis-je ?
               </p>
               <div className={renderMediaQueryStyle('about__description')}>
-                Ma passion pour le code remonte à il y a 10 ans. A
+                Ma passion pour le code remonte à il y a dix ans. À
                 l&apos;époque, la programmation était, à travers mon regard
                 d&apos;enfant, un terrain de jeu dans lequel tout était question
                 d&apos;
@@ -217,36 +217,6 @@ export default function Home() {
                 . Aujourd&apos;hui, cet état d&apos;esprit ne m&apos;a jamais
                 quitté et je continue à apprendre et à créer dans le
                 développement web.
-                <br />
-                <br />
-                L&apos;approche{' '}
-                <span
-                  className={renderMediaQueryStyle('about__description__span')}
-                >
-                  pragmatique
-                </span>{' '}
-                et{' '}
-                <span
-                  className={renderMediaQueryStyle('about__description__span')}
-                >
-                  artistique
-                </span>{' '}
-                nécessaires à la conception de sites web sont ce qui me plaît le
-                plus. Ce mélange intéressant de qualités que demandent le design
-                et la création d&apos;un site web fait directement écho au
-                travail de l&apos;artisan,{' '}
-                <span
-                  className={renderMediaQueryStyle('about__description__span')}
-                >
-                  minitueux
-                </span>{' '}
-                et{' '}
-                <span
-                  className={renderMediaQueryStyle('about__description__span')}
-                >
-                  créatif
-                </span>
-                .
                 <br />
                 <br />
                 J&apos;ai ainsi expérimenté différentes technologies{' '}
@@ -294,8 +264,44 @@ export default function Home() {
                 ) sur plusieurs projets.
                 <br />
                 <br />
-                J&apos;approche chacun des projets qui me sont confiés avec{' '}
-                rigueur et communication.
+                L&apos;approche{' '}
+                <span
+                  className={renderMediaQueryStyle('about__description__span')}
+                >
+                  pragmatique
+                </span>{' '}
+                et{' '}
+                <span
+                  className={renderMediaQueryStyle('about__description__span')}
+                >
+                  artistique
+                </span>{' '}
+                nécessaires à la conception de sites web sont ce qui me plaît le
+                plus. Ce mélange intéressant de qualités que demandent le design
+                et la création d&apos;un site web fait directement écho au
+                travail de l&apos;artisan,{' '}
+                <span
+                  className={renderMediaQueryStyle('about__description__span')}
+                >
+                  minitueux
+                </span>{' '}
+                et{' '}
+                <span
+                  className={renderMediaQueryStyle('about__description__span')}
+                >
+                  créatif
+                </span>
+                .
+                <br />
+                <br />
+                Dans une optique d'apprentissage, je poursuis également un
+                bachelor en Computer Science à temps partiel et à distance à l'
+                <span
+                  className={renderMediaQueryStyle('about__description__span')}
+                >
+                  université de Londres
+                </span>
+                .
                 <span
                   className={renderMediaQueryStyle('about__description__span')}
                 ></span>
