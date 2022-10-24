@@ -162,8 +162,8 @@ export default function Home() {
             <span className="home__title--3">développeur web</span>
           </p>
           <p className="home__description">
-            Je suis un développeur web passionné par le design et la création de
-            sites web.
+            Je suis un développeur frontend passionné par le design et la
+            création de sites web.
           </p>
           <a href="#contact" className="home__link">
             <button className="button__style--1__medium home__button">
@@ -199,39 +199,106 @@ export default function Home() {
                 Qui suis-je ?
               </p>
               <div className={renderMediaQueryStyle('about__description')}>
-                En tant que développeur frontend junior, j&apos;ai eu
-                l&apos;occasion d&apos;expérimenter plusieurs technologies{' '}
+                Ma passion pour le code remonte à il y a 10 ans. A
+                l&apos;époque, la programmation était, à travers mon regard
+                d&apos;enfant, un terrain de jeu dans lequel tout était question
+                d&apos;
                 <span
                   className={renderMediaQueryStyle('about__description__span')}
                 >
-                  frontend et backend
+                  apprentissage
                 </span>{' '}
-                sur les différents projets sur lesquels j&apos;ai pu travailler.{' '}
+                et d&apos;
+                <span
+                  className={renderMediaQueryStyle('about__description__span')}
+                >
+                  expérimentation
+                </span>
+                . Aujourd&apos;hui, cet état d&apos;esprit ne m&apos;a jamais
+                quitté et je continue à apprendre et à créer dans le
+                développement web.
                 <br />
                 <br />
                 L&apos;approche{' '}
                 <span
                   className={renderMediaQueryStyle('about__description__span')}
                 >
-                  pragmatique et artistique
+                  pragmatique
+                </span>{' '}
+                et{' '}
+                <span
+                  className={renderMediaQueryStyle('about__description__span')}
+                >
+                  artistique
                 </span>{' '}
                 nécessaires à la conception de sites web sont ce qui me plaît le
-                plus. Ce mélange intéressant de qualités que demandent{' '}
+                plus. Ce mélange intéressant de qualités que demandent le design
+                et la création d&apos;un site web fait directement écho au
+                travail de l&apos;artisan,{' '}
                 <span
                   className={renderMediaQueryStyle('about__description__span')}
                 >
-                  le design et la création
+                  minitueux
                 </span>{' '}
-                d&apos;un site web fait directement écho au travail de
-                l&apos;artisan, minitueux et créatif.
-                <br /> <br />
-                J&apos;approche chacun des projets qui me sont confiés avec{' '}
+                et{' '}
                 <span
                   className={renderMediaQueryStyle('about__description__span')}
                 >
-                  rigueur et communication
+                  créatif
                 </span>
                 .
+                <br />
+                <br />
+                J&apos;ai ainsi expérimenté différentes technologies{' '}
+                <span
+                  className={renderMediaQueryStyle('about__description__span')}
+                >
+                  frontend{' '}
+                </span>
+                (telles que{' '}
+                <span
+                  className={renderMediaQueryStyle('about__description__span')}
+                >
+                  React
+                </span>{' '}
+                et plus récemment{' '}
+                <span
+                  className={renderMediaQueryStyle('about__description__span')}
+                >
+                  Vue.js
+                </span>
+                ) ainsi que{' '}
+                <span
+                  className={renderMediaQueryStyle('about__description__span')}
+                >
+                  backend{' '}
+                </span>
+                (
+                <span
+                  className={renderMediaQueryStyle('about__description__span')}
+                >
+                  Express
+                </span>
+                ,{' '}
+                <span
+                  className={renderMediaQueryStyle('about__description__span')}
+                >
+                  Nodejs
+                </span>{' '}
+                et plus récemment{' '}
+                <span
+                  className={renderMediaQueryStyle('about__description__span')}
+                >
+                  Django
+                </span>
+                ) sur plusieurs projets.
+                <br />
+                <br />
+                J&apos;approche chacun des projets qui me sont confiés avec{' '}
+                rigueur et communication.
+                <span
+                  className={renderMediaQueryStyle('about__description__span')}
+                ></span>
               </div>
             </div>
             <div
