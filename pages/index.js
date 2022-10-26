@@ -162,8 +162,8 @@ export default function Home() {
             <span className="home__title--3">développeur web</span>
           </p>
           <p className="home__description">
-            Je suis un développeur frontend passionné par le design et la
-            création de sites web.
+            Je suis un développeur web passionné par le design et la création de
+            sites web.
           </p>
           <a href="#contact" className="home__link">
             <button className="button__style--1__medium home__button">
@@ -294,17 +294,8 @@ export default function Home() {
                 .
                 <br />
                 <br />
-                Dans une optique d'apprentissage, je poursuis également un
-                bachelor en Computer Science à temps partiel et à distance à l'
-                <span
-                  className={renderMediaQueryStyle('about__description__span')}
-                >
-                  université de Londres
-                </span>
-                .
-                <span
-                  className={renderMediaQueryStyle('about__description__span')}
-                ></span>
+                J'approche chacun des projets qui me sont confiés avec rigueur
+                et communication.
               </div>
             </div>
             <div
