@@ -64,7 +64,7 @@ const projects = [
 
     technologies: ['javascript', 'express', 'MySQL', 'nodejs', 'SASS'],
     imageSrc: collectifRegina,
-    url: 'http://3.21.122.101:3000/',
+    url: 'http://3.138.183.184:3000/',
   },
 
   {
