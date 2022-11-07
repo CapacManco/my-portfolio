@@ -294,8 +294,8 @@ export default function Home() {
                 .
                 <br />
                 <br />
-                J'approche chacun des projets qui me sont confiés avec rigueur
-                et communication.
+                J&pos;approche chacun des projets qui me sont confiés avec
+                rigueur et communication.
               </div>
             </div>
             <div
